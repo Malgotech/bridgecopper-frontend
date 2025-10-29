@@ -1,0 +1,95 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.form-label {
+    margin: 0 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input,
+input:active,
+input:focus,
+input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.error-message {
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E47429;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E47429;
+    border-radius: 10px;
+
+}
+
+
+
+.custom-container {
+    width: 100%;
+    max-height: 100%;
+    padding: 0px 120px;
+}
+
+//// Laptop Screen
+@media (max-width:1600px) {
+    .custom-container {
+        padding: 0px 60px;
+    }
+}
+
+/// Tab Screen
+@media (min-width: 768px) and (max-width: 991px) {
+    .custom-container {
+        padding: 0px 30px;
+    }
+}
+
+//// Mobile Screen
+@media (max-width: 767px) {
+    .custom-container {
+        padding: 0px 20px;
+    }
+
+}

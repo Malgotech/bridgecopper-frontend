@@ -1,0 +1,33 @@
+ /* //urbanist */
+ @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+ :root {
+   --bs-body-bg: #FFFFFF !important;
+   --background-primary: #130601;
+   --text-primary: #2C2C2C;
+   --text-secondary: #DEDEDE;
+   --text-white: #FFFFFF;
+   --text-color-1: #130601;
+   --text-color-2: #6C6C6C;
+ }
+
+ * {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+ }
+
+
+ body {
+   margin: 0;
+   font-family: 'Satoshi' !important;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   scroll-behavior: smooth !important;
+   overflow-x: hidden !important;
+   background: var(--bs-body-bg) !important;
+ }
+
+ code {
+   font-family: 'Satoshi' !important;
+ }
