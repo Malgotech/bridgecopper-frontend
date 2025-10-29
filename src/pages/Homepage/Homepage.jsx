@@ -2,10 +2,16 @@ import React from 'react'
 import Style from "./Homepage.module.scss"
 import LeaderShip from './components/Leadership/LeaderShip'
 import PartnerShip from './components/PartnerShip/PartnerShip'
+import GlobalSupply from './components/GlobalSupply/GlobalSupply'
+import WhatWeDo from './components/WhatWeDo/WhatWeDo'
+import LondonMetal from './components/LondonMetal/LondonMetal'
 
 const Homepage = () => {
   return (
      <div className={Style.homepage}>
+      <LondonMetal/>
+      <WhatWeDo/>
+      <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>
      </div>

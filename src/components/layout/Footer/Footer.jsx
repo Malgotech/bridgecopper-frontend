@@ -48,7 +48,7 @@ const Footer = () => {
             <div className={Style.footer_head_right}>
               <p className={Style.p_text_2}>
                 Operating from Austria, Bridge Copper integrates mining,
-                trading, and logistics across continents.
+                trading, <br className="break"/> and logistics across continents.
               </p>
 
               <Button title="Let's Connect" img={arrowImg} />

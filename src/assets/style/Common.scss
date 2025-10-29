@@ -54,12 +54,12 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #E47429;
+    background: #6D2902;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #E47429;
+    background: #6D2902;
     border-radius: 10px;
 
 }
@@ -67,17 +67,18 @@ ul {
 
 
 .custom-container {
-    width: 100%;
+    width: 1204px;
     max-height: 100%;
-    padding: 0px 120px;
+    margin: 0 auto;
+    // padding: 0px 120px;
 }
 
-//// Laptop Screen
-@media (max-width:1600px) {
-    .custom-container {
-        padding: 0px 60px;
-    }
-}
+// //// Laptop Screen
+// @media (max-width:1600px) {
+//     .custom-container {
+//         padding: 0px 60px;
+//     }
+// }
 
 /// Tab Screen
 @media (min-width: 768px) and (max-width: 991px) {

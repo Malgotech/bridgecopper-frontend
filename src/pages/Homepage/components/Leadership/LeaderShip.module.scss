@@ -174,7 +174,7 @@
             }
 
             .h_text_2 {
-                font-size: calc(22px + 10 * (100vw - 320px) / 1080);
+                font-size: 28px;
                 font-weight: 500;
                 line-height: 124%;
                 color: var(--text-color-1);
@@ -199,11 +199,7 @@
                 color: var(--text-color-2);
                 letter-spacing: 0%;
                 line-height: 124%;
-                width: 70%;
-
-                @media (max-width:1600px) {
-                    width: 90%;
-                }
+                width: 90%;              
 
                 @media (max-width: 767px) {
                     width: 100%;

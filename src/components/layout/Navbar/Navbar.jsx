@@ -29,81 +29,83 @@ const Navbar = () => {
 
   return (
     <header className={`${Style.header} ${scrolled ? Style.shadow : ""}`}>
-      <a href="/" className={Style.header_link}>
-        <img
-          src={logo}
-          alt="bridge copper logo"
-          width={64}
-          height={64}
-          className={Style.header_logo}
-        />
-      </a>
+      <div className="custom-container">
+        <div className={Style.nav_container}>
+          <a href="/" className={Style.header_link}>
+            <img
+              src={logo}
+              alt="bridge copper logo"
+              width={64}
+              height={64}
+              className={Style.header_logo}
+            />
+          </a>
+          <nav className={`${Style.header_nav}`}>
+            <ul className="mobile-hide">
+              <li>
+                <Link to="/" className={`${Style.nav_link} `}>
+                  Our Copper
+                </Link>
+              </li>
+              <li>
+                <Link to="/plans" className={`${Style.nav_link}  `}>
+                  Our Network
+                </Link>
+              </li>
+              <li>
+                <Link to="/plots" className={`${Style.nav_link} `}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className={`${Style.nav_link}  `}>
+                  Vision
+                </Link>
+              </li>
 
-      <nav className={`${Style.header_nav}`}>
-        <ul className="mobile-hide">
-          <li>
-            <Link to="/" className={`${Style.nav_link} `}>
-              Our Copper
-            </Link>
-          </li>
-          <li>
-            <Link to="/plans" className={`${Style.nav_link}  `}>
-              Our Network
-            </Link>
-          </li>
-          <li>
-            <Link to="/plots" className={`${Style.nav_link} `}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/faq" className={`${Style.nav_link}  `}>
-              Vision
-            </Link>
-          </li>
+              <li>
+                <Button title="Let's Connect" />
+              </li>
+            </ul>
 
-          <li>
-            <Button title="Let's Connect" />
-          </li>
-        </ul>
+            <button
+              className={`${Style.btn_menu} desktop-hide tab-hide`}
+              onClick={handleNav}>
+              {isOpen ? <IoClose /> : <LuMenu />}
+            </button>
+          </nav>
+          {isOpen && (
+            <div className={Style.mobile_nav}>
+              <ul>
+                <li>
+                  <Link to="/" className={`${Style.nav_link} `}>
+                    Our Copper
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/plans" className={`${Style.nav_link}  `}>
+                    Our Network
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/plots" className={`${Style.nav_link} `}>
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faq" className={`${Style.nav_link}  `}>
+                    Vision
+                  </Link>
+                </li>
 
-        <button
-          className={`${Style.btn_menu} desktop-hide tab-hide`}
-          onClick={handleNav}>
-          {isOpen ? <IoClose /> : <LuMenu />}
-        </button>
-      </nav>
-
-      {isOpen && (
-        <div className={Style.mobile_nav}>
-          <ul>
-            <li>
-              <Link to="/" className={`${Style.nav_link} `}>
-                Our Copper
-              </Link>
-            </li>
-            <li>
-              <Link to="/plans" className={`${Style.nav_link}  `}>
-                Our Network
-              </Link>
-            </li>
-            <li>
-              <Link to="/plots" className={`${Style.nav_link} `}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/faq" className={`${Style.nav_link}  `}>
-                Vision
-              </Link>
-            </li>
-
-            <li>
-              <Button title="Let's Connect" />
-            </li>
-          </ul>
+                <li>
+                  <Button title="Let's Connect" />
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </header>
   );
 };
