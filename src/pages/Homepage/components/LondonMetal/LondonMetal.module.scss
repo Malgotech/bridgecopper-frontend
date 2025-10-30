@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0px;
+    padding: 200px 0px;
 
     .london_container {
         width: 100%;
@@ -66,8 +66,33 @@
             .bridge_score_content {
                 width: 276px;
                 height: 99px;
-                background-color: red;
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+
+                .p_text_1 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: var(--text-color-1);
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .p_text_2 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #53FF9D;
+                }
             }
         }
 
@@ -75,13 +100,13 @@
             max-width: 100%;
             max-height: 100%;
             position: absolute;
-            top: 6%;
+            top: 9%;
             left: 50%;
             transform: translate(-50%, 0);
             z-index: -2;
 
             @media (max-width: 767px) {
-                top: 3%;
+                top: 6%;
             }
         }
 
@@ -111,8 +136,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 1px solid #ebd9c7;
             transform: translate(-50%, -50%) scale(0);
@@ -134,12 +159,15 @@
         }
 
         .ripple:nth-child(3) {
-            animation-delay: 3s;
+            animation-delay: 2.5s;
         }
 
         .ripple:nth-child(4) {
-            animation-delay: 4.5s;
+            animation-delay: 3.5s;
         }
+
+       
+
 
         @keyframes rippleWave {
             0% {

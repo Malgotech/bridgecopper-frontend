@@ -61,7 +61,6 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
     background: #6D2902;
     border-radius: 10px;
-
 }
 
 
@@ -83,6 +82,7 @@ ul {
 /// Tab Screen
 @media (min-width: 768px) and (max-width: 991px) {
     .custom-container {
+        width: 100%;
         padding: 0px 30px;
     }
 }
@@ -90,9 +90,9 @@ ul {
 //// Mobile Screen
 @media (max-width: 767px) {
     .custom-container {
+        width: 100%;
         padding: 0px 20px;
     }
-
 }
 
 

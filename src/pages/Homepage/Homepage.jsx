@@ -5,10 +5,12 @@ import PartnerShip from './components/PartnerShip/PartnerShip'
 import GlobalSupply from './components/GlobalSupply/GlobalSupply'
 import WhatWeDo from './components/WhatWeDo/WhatWeDo'
 import LondonMetal from './components/LondonMetal/LondonMetal'
+import PremiumCopper from './components/PremiumCopper/PremiumCopper'
 
 const Homepage = () => {
   return (
      <div className={Style.homepage}>
+      <PremiumCopper/>
       <LondonMetal/>
       <WhatWeDo/>
       <GlobalSupply/>

@@ -74,6 +74,11 @@
                     span {
                         color: #6C6C6C;
                     }
+
+                      @media (max-width: 767px) {
+                         font-size: 28px;
+                        
+                    }
                 }
 
                 .footer_left_content {

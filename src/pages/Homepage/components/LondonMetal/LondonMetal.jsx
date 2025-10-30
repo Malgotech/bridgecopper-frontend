@@ -1,6 +1,7 @@
 import React from "react";
 import Style from "./LondonMetal.module.scss";
 import bridgeImg from "../../../../assets/images/bridge-img.svg";
+import upIcon from "../../../../assets/images/up-icon.svg";
 
 const LondonMetal = () => {
   return (
@@ -21,10 +22,18 @@ const LondonMetal = () => {
               className={Style.bridge_img}
             />
 
-            <div className={Style.bridge_score_content}></div>
-          </div>
+            <div className={Style.bridge_score_content}>
+              <p className={Style.p_text_1}>
+                $10,962.50<span>METRIC TON</span>
+              </p>
 
-          <div className={Style.round_animation}>
+              <p className={Style.p_text_2}>
+                <img src={upIcon} alt="bullish" width={15} height={14} />
+                +0.99%
+              </p>
+            </div>
+
+              <div className={Style.round_animation}>
             <div className={Style.round_container}>
               <div className={Style.ripple}></div>
               <div className={Style.ripple}></div>
@@ -33,6 +42,9 @@ const LondonMetal = () => {
               <div className={Style.round}></div>
             </div>
           </div>
+          </div>
+
+        
         </div>
       </div>
     </section>

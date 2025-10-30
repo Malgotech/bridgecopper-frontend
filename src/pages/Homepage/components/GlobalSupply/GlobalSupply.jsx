@@ -100,7 +100,7 @@ const GlobalSupply = () => {
         </div>
       </div>
 
-      <div className={`${Style.global_card_wrapper} `}>
+      <div className={`${Style.global_card_wrapper} tab-hide mobile-hide `}>
         <Swiper
           ref={swiperRef}
           modules={[Mousewheel]}
