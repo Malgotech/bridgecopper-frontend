@@ -1,13 +1,16 @@
 import React from "react";
 import Style from "./Button.module.scss";
 
-const Button = ({ title, img }) => {
+const Button = ({ title, img, className = "", onClick, type = "button" }) => {
   return (
-    <button className={Style.btn_connect}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${Style.btn_connect} ${className}`}
+    >
       <span>
-        {" "}
         {title}
-        {img ? <img src={img} alt="img" width={20} height={20} /> : ""}
+        {img && <img src={img} alt="icon" width={20} height={20} />}
       </span>
     </button>
   );

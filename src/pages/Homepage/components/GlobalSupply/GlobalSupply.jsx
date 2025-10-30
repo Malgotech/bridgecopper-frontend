@@ -140,6 +140,26 @@ const GlobalSupply = () => {
           ))}
         </Swiper>
       </div>
+
+      <div className="custom-container mt-5">
+        <div className="row   g-2 desktop-hide">
+          {cardData.map((card, index) => (
+            <div className="col-md-6 col-12" key={index}>
+              <div className={Style.global_card}>
+                <img
+                  src={cardImg1}
+                  alt={card.title}
+                  className={Style.card_img}
+                />
+                <div className={Style.card_content}>
+                  <p className={Style.p_text_3}>{card.title}</p>
+                  <p className={Style.p_text_4}>{card.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

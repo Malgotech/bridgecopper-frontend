@@ -41,7 +41,7 @@ const Navbar = () => {
             />
           </a>
           <nav className={`${Style.header_nav}`}>
-            <ul className="mobile-hide">
+            <ul className="mobile-hide ">
               <li>
                 <Link to="/" className={`${Style.nav_link} `}>
                   Our Copper

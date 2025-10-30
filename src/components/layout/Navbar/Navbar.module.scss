@@ -27,6 +27,7 @@
          font-family: "Urbanist", sans-serif;
          color: var(--text-primary);
          transition: color 0.3s ease;
+
      }
 
      .header_nav {
@@ -47,6 +48,7 @@
              align-items: center;
              gap: 20px;
              padding: 0;
+             margin-top: 12px;
          }
 
          .btn_menu {
@@ -91,6 +93,9 @@
  }
 
  .shadow {
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     background: rgba(255, 255, 255, 0.21);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(11.4px);
+     -webkit-backdrop-filter: blur(11.4px);
 
  }

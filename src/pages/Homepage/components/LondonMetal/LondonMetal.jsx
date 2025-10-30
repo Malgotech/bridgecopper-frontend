@@ -24,7 +24,7 @@ const LondonMetal = () => {
 
             <div className={Style.bridge_score_content}>
               <p className={Style.p_text_1}>
-                $10,962.50<span>METRIC TON</span>
+                $10,962.50/<span>METRIC TON</span>
               </p>
 
               <p className={Style.p_text_2}>
