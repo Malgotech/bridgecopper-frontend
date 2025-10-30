@@ -11,7 +11,7 @@ const Homepage = () => {
   return (
      <div className={Style.homepage}>
       <PremiumCopper/>
-      <LondonMetal/>
+      {/* <LondonMetal/> */}
       <WhatWeDo/>
       <GlobalSupply/>
       <PartnerShip/>
