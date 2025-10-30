@@ -13,6 +13,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow-x: hidden;
 
         .h_text_1 {
             font-size: 40px;
@@ -40,6 +41,7 @@
             justify-content: flex-end;
             position: relative;
             z-index: 1;
+            
 
             &:hover {
                 .bridge_img {
