@@ -10,8 +10,8 @@ import PremiumCopper from './components/PremiumCopper/PremiumCopper'
 const Homepage = () => {
   return (
      <div className={Style.homepage}>
-      <PremiumCopper/>
-      {/* <LondonMetal/> */}
+      {/* <PremiumCopper/> */}
+      <LondonMetal/>
       <WhatWeDo/>
       <GlobalSupply/>
       <PartnerShip/>
