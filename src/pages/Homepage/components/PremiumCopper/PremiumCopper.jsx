@@ -105,7 +105,7 @@ const PremiumCopper = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-12  bg-success">
+          <div className="col-lg-6 col-md-12 col-12  ">
             <div className={Style.premium_section_right}>
               <h2 className={Style.h_text_1}>
                 <span> Premium copper </span> <br className="break" />{" "}
