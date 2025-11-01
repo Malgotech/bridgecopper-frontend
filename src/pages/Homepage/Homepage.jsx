@@ -8,13 +8,13 @@ import LondonMetal from './components/LondonMetal/LondonMetal'
 import PremiumCopper from './components/PremiumCopper/PremiumCopper'
 import BannerSection from './components/BannerSection/BannerSection'
 
-const Homepage = () => {
+const Homepage = ({isActive}) => {
   return (
      <div className={Style.homepage}>
       <BannerSection/>
       <PremiumCopper/>
       <LondonMetal/>
-      <WhatWeDo/>
+      <WhatWeDo isActive={isActive}/>
       <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>

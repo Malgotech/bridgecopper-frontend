@@ -201,7 +201,7 @@ const cardsData = [
   },
 ];
 
-const WhatWeDo = () => {
+const WhatWeDo = ({isActive}) => {
   const sectionRef = useRef(null);
   const [visibleCards, setVisibleCards] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
@@ -279,7 +279,7 @@ const WhatWeDo = () => {
   }, [isLocked, visibleCards, isAnimating]);
 
   return (
-    <section className={Style.what_section}>
+    <section id="third-section"  className={`${Style.what_section} ${isActive ? Style.active_section :" "}`} >
       <div className="custom-container">
         <div className={Style.what_section_head}>
           <div className={Style.what_section_head_left}>

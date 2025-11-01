@@ -6,9 +6,10 @@ import logo from "../../../assets/images/header-logo.svg";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ setThirdSectionActive }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+   const [bgChange, setBgChange] = useState(false);
 
   const handleNav = () => {
     setIsOpen(!isOpen);
@@ -27,8 +28,35 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const thirdSection = document.getElementById("third-section");
+      const navbar = document.getElementById("navbar");
+
+      if (!thirdSection || !navbar) return;
+
+      const navbarHeight = navbar.offsetHeight;
+      const sectionTop = thirdSection.getBoundingClientRect().top;
+      const sectionBottom = thirdSection.getBoundingClientRect().bottom;
+
+      // Check if third section is within the visible area (taking navbar height into account)
+      if (sectionTop <= navbarHeight && sectionBottom > navbarHeight) {
+        setBgChange(true);
+        setThirdSectionActive(true);
+      } else {
+        setBgChange(false);
+        setThirdSectionActive(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setThirdSectionActive]);
+
   return (
-    <header className={`${Style.header} ${scrolled ? Style.shadow : ""}`}>
+    <header
+      id="navbar"
+      className={`${Style.header} ${scrolled ? Style.shadow : ""}`}>
       <div className="custom-container">
         <div className={Style.nav_container}>
           <a href="/" className={Style.header_link}>
