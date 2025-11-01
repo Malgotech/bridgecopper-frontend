@@ -5,6 +5,13 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 767px) {
+        padding: 50px 0px;
+    }
+
+
+
+
 
 
     .london_container {
@@ -14,10 +21,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-       
-
-
-        
 
         .h_text_1 {
             font-size: 40px;

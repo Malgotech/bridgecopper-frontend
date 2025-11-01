@@ -1,71 +1,123 @@
 import React, { useRef, useState, useEffect } from "react";
 import Style from "./WhatWeDo.module.scss";
 import cardImg1 from "../../../../assets/images/what-card-img-1.svg";
-import { Mousewheel } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Virtual } from "swiper/modules";
-import { EffectCards } from "swiper/modules";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/virtual";
 
 const WhatWeDo = () => {
-  const swiperRef = useRef(null);
- const [activeIndex, setActiveIndex] = useState(3);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const swiperContainerRef = useRef(null);
+  const isScrolling = useRef(false);
+  const allowScroll = useRef(true);
 
-  // Card data
-  const cardsData = [
+  const cards = [
     {
       title: "Direct Copper Sourcing",
       description:
-        "Secure direct access to premium copper from verified global mines with guaranteed quality and competitive pricing.",
+        "Direct access to copper sources ensuring quality and reliability in our supply chain.",
       image: cardImg1,
     },
     {
       title: "Exclusive Regional Supply",
       description:
-        "Dedicated supply chains tailored to your region ensuring consistent availability and reduced lead times.",
+        "Exclusive regional supply partnerships that guarantee consistent availability.",
       image: cardImg1,
     },
     {
       title: "Integrated Trade Logistics",
       description:
-        "End-to-end logistics solutions from mine to delivery with real-time tracking and customs clearance.",
+        "Seamless integrated logistics for efficient copper trade operations worldwide.",
       image: cardImg1,
     },
     {
       title: "Trusted Partnerships",
       description:
-        "Transparency and accountability embedded throughout our operations, backed by international banks and trade insurance providers. Our system is designed for long-term confidence.",
+        "Transparency and accountability are embedded throughout our operations, backed by international banks and trade insurance providers. Our system is designed for long-term confidence, and make up our company's DNA.",
       image: cardImg1,
     },
   ];
 
-  // Scroll event handler
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const windowHeight = window.innerHeight;
-      const cardHeight = windowHeight * 0.8; // 80% of viewport height
+    const container = swiperContainerRef.current;
+    if (!container) return;
 
-      // Calculate which card should be active based on scroll position
-      const newIndex = Math.round(scrollTop / cardHeight);
-      const clampedIndex = Math.max(
-        0,
-        Math.min(newIndex, cardsData.length - 1)
-      );
+    const handleWheel = (e) => {
+      if (!allowScroll.current) return;
 
-      if (clampedIndex !== activeIndex) {
-        setActiveIndex(clampedIndex);
-        if (swiperRef.current?.swiper) {
-          swiperRef.current.swiper.slideTo(clampedIndex);
+      const isLastCard = currentSlide === cards.length - 1;
+      const isFirstCard = currentSlide === 0;
+
+      // Lock page scroll inside section
+      e.preventDefault();
+
+      if (isScrolling.current) return;
+      isScrolling.current = true;
+
+      // Scroll down
+      if (e.deltaY > 0) {
+        if (!isLastCard) {
+          setCurrentSlide((prev) => Math.min(prev + 1, cards.length - 1));
+        } else {
+          // Allow natural scroll after reaching last card
+          allowScroll.current = false;
+          setTimeout(() => {
+            allowScroll.current = true;
+          }, 1000);
+          window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
         }
       }
+
+      // Scroll up
+      if (e.deltaY < 0) {
+        if (!isFirstCard) {
+          setCurrentSlide((prev) => Math.max(prev - 1, 0));
+        } else {
+          // Allow natural scroll after reaching first card
+          allowScroll.current = false;
+          setTimeout(() => {
+            allowScroll.current = true;
+          }, 1000);
+          window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
+        }
+      }
+
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 800);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeIndex]);
+    container.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      container.removeEventListener("wheel", handleWheel);
+    };
+  }, [currentSlide]);
+
+  const getCardStyle = (index) => {
+    const position = index - currentSlide;
+
+    if (position === 0) {
+      return {
+        zIndex: cards.length,
+        transform: "translateY(0) scale(1)",
+        opacity: 1,
+      };
+    } else if (position < 0) {
+      return {
+        zIndex: cards.length + position,
+        transform: `translateY(-${Math.abs(position) * 40}px) scale(${
+          1 - Math.abs(position) * 0.05
+        })`,
+        opacity: 0.7 - Math.abs(position) * 0.2,
+      };
+    } else {
+      return {
+        zIndex: cards.length - position,
+        transform: `translateY(${position * 40}px) scale(${
+          1 - position * 0.05
+        })`,
+        opacity: 0.4 - position * 0.1,
+      };
+    }
+  };
 
   return (
     <section className={Style.what_section}>
@@ -88,51 +140,39 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-
-    <div className={Style.what_swiper_container}>
-      <Swiper
-        direction="vertical"
-        slidesPerView={1}
-        mousewheel={{ releaseOnEdges: false, sensitivity: 1 }}
-        speed={800}
-        grabCursor={true}
-        modules={[Mousewheel]}
-        className={Style.expo_vertical_swiper}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-      >
-        {cardsData.map((card, index) => (
-          <SwiperSlide key={index} className={Style.card_slide}>
+        <div className={Style.what_swiper_container} ref={swiperContainerRef}>
+          {cards.map((card, index) => (
             <div
+              key={index}
               className={`${Style.what_card} ${
-                activeIndex === index ? Style.active : ""
+                index === currentSlide
+                  ? Style.active
+                  : index < currentSlide
+                  ? Style.prev
+                  : Style.next
               }`}
-            >
-              <div className={Style.card_body}>
-                <h2 className={Style.h_text_1}>{card.title}</h2>
-                {activeIndex === index && (
-                  <>
-                    <p className={Style.p_text_3}>{card.description}</p>
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      width={493}
-                      height={478}
-                      className={Style.card_img}
-                    />
-                  </>
-                )}
+              style={getCardStyle(index)}>
+              <div className={Style.card_left}>
+                <h2 className={Style.h_text_2}>{card.title}</h2>
+                <p className={Style.p_text_3}>{card.description}</p>
               </div>
+              <img
+                src={card.image}
+                alt="card"
+                width={493}
+                height={478}
+                className={Style.card_img}
+              />
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-
-    
- 
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default WhatWeDo;
+
+
+
+ 

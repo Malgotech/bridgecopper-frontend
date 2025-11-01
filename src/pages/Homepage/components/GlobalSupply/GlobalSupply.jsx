@@ -88,13 +88,13 @@ const GlobalSupply = () => {
             <h2 className={Style.h_text_1}>Global Supply Chain</h2>
             <p className={Style.p_text_1}>
               Bridge Copper integrates direct copper production with a{" "}
-              <br className="break" /> seamless, world-class logistics network.
+              <br className="break tab-break" /> seamless, world-class logistics network.
             </p>
           </div>
           <p className={Style.p_text_2}>
             Operating from our European headquarters in Austria, we{" "}
-            <br className="break" /> connect elite mine owners in Chile and
-            Arizona to clients across <br className="break" /> Asia, Europe, and
+            <br className="break tab-break" /> connect elite mine owners in Chile and
+            Arizona to clients across <br className="break tab-break" /> Asia, Europe, and
             the Middle East.
           </p>
         </div>

@@ -3,6 +3,8 @@ import Style from "./BannerSection.module.scss";
 import Button from "../../../../components/common/Button/Button";
 import backgrundvdo from "../../../../assets/images/banner-background-vdo.mp4";
 import enami from "../../../../assets/images/enami.svg";
+import square from "../../../../assets/images/banner-square.png";
+
 const BannerSection = () => {
   return (
     <section className={Style.banner_section}>
@@ -58,10 +60,13 @@ const BannerSection = () => {
 
         <div
           className={`${Style.bottom_left_positon} tab-hide mobile-hide`}></div>
+      
       </div>
 
       <div className={Style.banner_bottom_content}>
-        <p className={`${Style.p_text_2} mobile-hide`}>Partnered with entities</p>
+        <p className={`${Style.p_text_2} mobile-hide`}>
+          Partnered with entities
+        </p>
         <div className={Style.bottom_container}>
           <div className={Style.bottom_content}>
             <p className={Style.p_text_3}>$10B</p>

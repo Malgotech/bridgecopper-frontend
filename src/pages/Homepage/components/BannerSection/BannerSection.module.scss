@@ -152,15 +152,16 @@
 
         &::before {
             content: "";
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             position: absolute;
             bottom: 160px;
             right: -12px;
             background-color: white;
             z-index: -1;
             border-bottom-right-radius: 30px;
-            clip-path: polygon(96% 57%, 100% 40%, 100% 79%, 100% 100%, 32% 100%, 54% 95%, 70% 88%, 80% 80%, 87% 71%);
+            clip-path: polygon(88% 71%, 100% 6%, 100% 100%, 0 99%, 26% 96%, 40% 93%, 54% 91%, 63% 88%, 74% 85%, 83% 79%);
+
 
             @media (min-width: 300px) and (max-width: 991px) {
                 display: none;
@@ -208,7 +209,6 @@
         }
 
 
-
         .bottom_left_positon {
             width: 100px;
             height: 100px;
@@ -218,14 +218,15 @@
             background-color: white;
             z-index: -1;
             border-bottom-right-radius: 30px;
-            clip-path: polygon(78% 69%, 89% 47%, 100% 0, 100% 100%, 0 100%, 27% 93%, 47% 89%, 61% 83%);
+            clip-path: polygon(88% 71%, 100% 6%, 100% 100%, 0 99%, 26% 96%, 40% 93%, 54% 91%, 63% 88%, 74% 85%, 83% 79%);
 
+            @media (max-width: 1600px) {
+                bottom: -12px;
+                left: 42.5%;
+            }
         }
 
-
-
-
-
+      
 
         .banner_vdo_content {
             width: 100%;
