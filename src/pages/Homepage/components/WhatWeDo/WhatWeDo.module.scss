@@ -1,12 +1,384 @@
+// .what_section {
+//     width: 100%;
+//     max-height: 100%;
+//     background: #130601;
+//     padding: 80px 0px;
+
+//     .what_section_head {
+//         width: 100%;
+//         max-height: 100%;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         gap: 20px;
+
+//         @media (max-width: 767px) {
+//             flex-direction: column;
+//             align-items: flex-start;
+//         }
+
+//         .what_section_head_left {
+//             max-width: 100%;
+//             max-height: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: flex-start;
+//             justify-content: flex-start;
+//             gap: 12px;
+
+//             @media (min-width: 768px) and (max-width: 991px) {
+//                 width: 50%;
+//             }
+
+
+//             .h_text_1 {
+//                 font-size: calc(26px + 16 * (100vw - 320px) / 1080);
+//                 font-weight: 500;
+//                 line-height: 124%;
+//                 color: #EECBAA;
+//             }
+
+//             .p_text_1 {
+//                 font-size: calc(16px + 2 * (100vw - 320px) / 1080);
+//                 font-weight: 500;
+//                 line-height: 124%;
+//                 color: var(--text-white);
+//                 font-family: "Urbanist", sans-serif;
+//                 text-align: start;
+
+//                 @media (min-width: 768px) and (max-width: 991px) {
+//                     font-size: 16px;
+//                 }
+
+//             }
+//         }
+
+//         .p_text_2 {
+//             font-size: calc(14px + 2 * (100vw - 320px) / 1080);
+//             font-weight: 500;
+//             line-height: 124%;
+//             color: #B1B1B1;
+//             font-family: "Urbanist", sans-serif;
+
+//             @media (min-width: 768px) and (max-width: 991px) {
+//                 width: 50%;
+//             }
+//         }
+//     }
+
+
+//     // .what_swiper_container {
+//     //     width: 100%;
+//     //     max-height: 100%;
+//     //     margin-top: 60px;
+
+//     //     .what_card {
+//     //         width: 100%;
+//     //         padding: 40px;
+//     //         background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
+//     //         border-radius: 16px;
+//     //         margin-bottom: 10px;
+//     //         display: flex;
+//     //         justify-content: space-between;
+//     //         align-items: flex-start;
+//     //         transition: all 0.4s ease;
+//     //         position: relative;
+//     //         overflow: hidden;
+
+//     //         &::before {
+//     //             content: "";
+//     //             position: absolute;
+//     //             inset: 0;
+//     //             background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
+//     //             opacity: 0.15;
+//     //             z-index: 0;
+//     //         }
+
+//     //         .card_left {
+//     //             width: 100%;
+//     //             flex: 1;
+//     //             display: flex;
+//     //             flex-direction: column;
+//     //             justify-content: center;
+//     //             gap: 16px;
+//     //             z-index: 2;
+
+//     //             .h_text_2 {
+//     //                 font-size: 36px;
+//     //                 font-weight: 500;
+//     //                 color: #fff;
+//     //             }
+
+//     //             .p_text_3 {
+//     //                 font-size: 18px;
+//     //                 font-weight: 500;
+//     //                 color: #B1B1B1;
+//     //                 font-family: "Urbanist", sans-serif;
+//     //                 width: 75%;
+//     //             }
+//     //         }
+
+//     //     }
+//     // }
+
+
+//     // .what_swiper_container {
+//     //     width: 100%;
+//     //     height: 600px;
+//     //     margin-top: 60px;
+//     //     position: relative;
+//     //     overflow: hidden;
+
+//     //     .what_card {
+//     //         width: 100%;
+//     //         padding: 40px;
+//     //         background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
+//     //         border-radius: 16px;
+//     //         display: flex;
+//     //         justify-content: space-between;
+//     //         align-items: flex-start;
+//     //         transition: all 0.6s ease;
+//     //         position: absolute;
+//     //         top: 0;
+//     //         left: 0;
+//     //         overflow: hidden;
+//     //         cursor: pointer;
+
+//     //         &::before {
+//     //             content: "";
+//     //             position: absolute;
+//     //             inset: 0;
+//     //             background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
+//     //             opacity: 0.15;
+//     //             z-index: 0;
+//     //         }
+
+//     //         // Active card (front)
+//     //         &.active {
+//     //             opacity: 1;
+//     //             transform: translateY(0) scale(1);
+//     //         }
+
+//     //         // Previous cards (above)
+//     //         &.prev {
+//     //             opacity: 0.7;
+//     //             pointer-events: none;
+//     //         }
+
+//     //         // Next cards (below)
+//     //         &.next {
+//     //             opacity: 0.4;
+//     //             pointer-events: none;
+
+//     //         }
+
+//     //         .card_left {
+//     //             width: 100%;
+//     //             flex: 1;
+//     //             display: flex;
+//     //             flex-direction: column;
+//     //             justify-content: center;
+//     //             gap: 16px;
+//     //             z-index: 2;
+
+//     //             .h_text_2 {
+//     //                 font-size: 36px;
+//     //                 font-weight: 500;
+//     //                 color: #fff;
+//     //             }
+
+//     //             .p_text_3 {
+//     //                 font-size: 18px;
+//     //                 font-weight: 500;
+//     //                 color: #B1B1B1;
+//     //                 font-family: "Urbanist", sans-serif;
+//     //                 width: 75%;
+//     //             }
+//     //         }
+
+//     //         .card_img {
+//     //             z-index: 2;
+//     //             border-radius: 8px;
+//     //         }
+//     //     }
+//     // }
+
+
+
+
+//     .what_swiper_container {
+//         width: 100%;
+//         height: 600px;
+//         margin-top: 120px;
+//         position: relative;
+//         overflow: visible;
+
+
+
+//         .what_card {
+//             width: 100%;
+//             padding: 40px;
+//             background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
+//             border-radius: 16px;
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: flex-start;
+//             transition: all 0.6s ease;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             overflow: hidden;
+//             cursor: pointer;
+//             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+//             @media (max-width: 767px) {
+//                 padding: 20px;
+//             }
+
+//             &::before {
+//                 content: "";
+//                 position: absolute;
+//                 inset: 0;
+//                 background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
+//                 z-index: 0;
+//             }
+
+//             // Active card (front and center)
+//             &.active {
+//                 opacity: 1;
+//                 transform: translateY(0) scale(1);
+//                 z-index: 10;
+//             }
+
+//             // Previous cards (stacked above)
+//             &.prev {
+//                 opacity: 0.7;
+//                 pointer-events: none;
+//             }
+
+//             // Next cards (stacked below)
+//             &.next {
+//                 opacity: 0.4;
+//                 pointer-events: none;
+//             }
+
+//             .card_left {
+//                 width: 100%;
+//                 flex: 1;
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: center;
+//                 gap: 16px;
+//                 z-index: 2;
+
+//                 .h_text_2 {
+//                     font-size: 36px;
+//                     font-weight: 500;
+//                     color: #fff;
+
+//                     @media (max-width: 767px) {
+//                         font-size: 24px;
+//                     }
+//                 }
+
+//                 .p_text_3 {
+//                     font-size: 18px;
+//                     font-weight: 500;
+//                     color: #B1B1B1;
+//                     font-family: "Urbanist", sans-serif;
+//                     width: 75%;
+
+//                     @media (max-width: 767px) {
+//                          font-size: 16px;
+//                          width: 100%;
+//                     }
+
+
+//                 }
+//             }
+
+//             .card_img {
+//                 z-index: 2;
+//                 border-radius: 8px;
+//                 margin-top: 40px;
+//             }
+//         }
+//     }
+
+
+
+//     @media (min-width: 768px) and (max-width: 991px) {
+//         height: 850px;
+//         margin-top: 100px;
+
+//         .what_card {
+//             padding: 30px;
+
+
+//             .card_left {
+//                 .h_text_2 {
+//                     font-size: 28px;
+//                 }
+
+//                 .p_text_3 {
+//                     font-size: 16px;
+//                     width: 100%;
+//                     line-height: 1.5;
+//                 }
+//             }
+
+//             .card_img {
+//                 order: 2;
+//                 margin-top: 0;
+//                 margin-bottom: 30px;
+//                 width: 100%;
+//                 max-width: 300px;
+//                 height: auto;
+//             }
+//         }
+//     }
+
+//     @media (max-width: 767px) {
+//         height: auto;
+//         margin-top: 80px;
+
+//         .what_card {
+//             border-radius: 12px;
+//             flex-direction: column;
+//             padding: 0;
+//             background-color: red !important;
+
+//             .card_left {
+//                 gap: 10px;
+
+//                 .h_text_2 {
+//                     font-size: 24px;
+//                 }
+
+//                 .p_text_3 {
+//                     font-size: 14px;
+//                 }
+//             }
+
+//             .card_img {
+//                 width: 100%;
+//                 height: auto;
+
+//             }
+//         }
+//     }
+
+// }
+
+
+
 .what_section {
     width: 100%;
-    max-height: 100%;
     background: #130601;
-    padding: 80px 0px;
+    padding: 80px 0;
 
     .what_section_head {
         width: 100%;
-        max-height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,368 +390,118 @@
         }
 
         .what_section_head_left {
-            max-width: 100%;
-            max-height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
             gap: 12px;
-
-            @media (min-width: 768px) and (max-width: 991px) {
-                width: 50%;
-            }
-
 
             .h_text_1 {
                 font-size: calc(26px + 16 * (100vw - 320px) / 1080);
                 font-weight: 500;
-                line-height: 124%;
-                color: #EECBAA;
+                color: #eecbaa;
             }
 
             .p_text_1 {
                 font-size: calc(16px + 2 * (100vw - 320px) / 1080);
-                font-weight: 500;
-                line-height: 124%;
-                color: var(--text-white);
+                color: #fff;
                 font-family: "Urbanist", sans-serif;
-                text-align: start;
-
-                @media (min-width: 768px) and (max-width: 991px) {
-                    font-size: 16px;
-                }
-
             }
         }
 
         .p_text_2 {
             font-size: calc(14px + 2 * (100vw - 320px) / 1080);
             font-weight: 500;
-            line-height: 124%;
-            color: #B1B1B1;
+            color: #b1b1b1;
             font-family: "Urbanist", sans-serif;
-
-            @media (min-width: 768px) and (max-width: 991px) {
-                width: 50%;
-            }
         }
     }
 
-
-    // .what_swiper_container {
-    //     width: 100%;
-    //     max-height: 100%;
-    //     margin-top: 60px;
-
-    //     .what_card {
-    //         width: 100%;
-    //         padding: 40px;
-    //         background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
-    //         border-radius: 16px;
-    //         margin-bottom: 10px;
-    //         display: flex;
-    //         justify-content: space-between;
-    //         align-items: flex-start;
-    //         transition: all 0.4s ease;
-    //         position: relative;
-    //         overflow: hidden;
-
-    //         &::before {
-    //             content: "";
-    //             position: absolute;
-    //             inset: 0;
-    //             background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
-    //             opacity: 0.15;
-    //             z-index: 0;
-    //         }
-
-    //         .card_left {
-    //             width: 100%;
-    //             flex: 1;
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             gap: 16px;
-    //             z-index: 2;
-
-    //             .h_text_2 {
-    //                 font-size: 36px;
-    //                 font-weight: 500;
-    //                 color: #fff;
-    //             }
-
-    //             .p_text_3 {
-    //                 font-size: 18px;
-    //                 font-weight: 500;
-    //                 color: #B1B1B1;
-    //                 font-family: "Urbanist", sans-serif;
-    //                 width: 75%;
-    //             }
-    //         }
-
-    //     }
-    // }
-
-
-    // .what_swiper_container {
-    //     width: 100%;
-    //     height: 600px;
-    //     margin-top: 60px;
-    //     position: relative;
-    //     overflow: hidden;
-
-    //     .what_card {
-    //         width: 100%;
-    //         padding: 40px;
-    //         background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
-    //         border-radius: 16px;
-    //         display: flex;
-    //         justify-content: space-between;
-    //         align-items: flex-start;
-    //         transition: all 0.6s ease;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         overflow: hidden;
-    //         cursor: pointer;
-
-    //         &::before {
-    //             content: "";
-    //             position: absolute;
-    //             inset: 0;
-    //             background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
-    //             opacity: 0.15;
-    //             z-index: 0;
-    //         }
-
-    //         // Active card (front)
-    //         &.active {
-    //             opacity: 1;
-    //             transform: translateY(0) scale(1);
-    //         }
-
-    //         // Previous cards (above)
-    //         &.prev {
-    //             opacity: 0.7;
-    //             pointer-events: none;
-    //         }
-
-    //         // Next cards (below)
-    //         &.next {
-    //             opacity: 0.4;
-    //             pointer-events: none;
-
-    //         }
-
-    //         .card_left {
-    //             width: 100%;
-    //             flex: 1;
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             gap: 16px;
-    //             z-index: 2;
-
-    //             .h_text_2 {
-    //                 font-size: 36px;
-    //                 font-weight: 500;
-    //                 color: #fff;
-    //             }
-
-    //             .p_text_3 {
-    //                 font-size: 18px;
-    //                 font-weight: 500;
-    //                 color: #B1B1B1;
-    //                 font-family: "Urbanist", sans-serif;
-    //                 width: 75%;
-    //             }
-    //         }
-
-    //         .card_img {
-    //             z-index: 2;
-    //             border-radius: 8px;
-    //         }
-    //     }
-    // }
-
-
-
+    .swiper_ref_container {
+        width: 100%;
+        height: 1100px;
+        padding-top: 100px;
+    }
 
     .what_swiper_container {
-        width: 100%;
-        height: 600px;
-        margin-top: 120px;
         position: relative;
-        overflow: visible;
-
-
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
 
         .what_card {
             width: 100%;
             padding: 40px;
-            background: linear-gradient(180deg, #3b1208 0%, #2a0a04 100%);
             border-radius: 16px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            transition: all 0.6s ease;
             position: absolute;
             top: 0;
             left: 0;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
-            @media (max-width: 767px) {
-                padding: 20px;
-            }
+            opacity: 0;
+            transform: translateY(150px) scale(0.98);
+            transition: all 0.9s ease-in-out;
+            z-index: 1;
 
             &::before {
                 content: "";
                 position: absolute;
                 inset: 0;
                 background: url("../../../../assets/images/what-card-background-img-1.svg") no-repeat center/cover;
-                z-index: 0;
-            }
-
-            // Active card (front and center)
-            &.active {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                z-index: 10;
-            }
-
-            // Previous cards (stacked above)
-            &.prev {
-                opacity: 0.7;
-                pointer-events: none;
-            }
-
-            // Next cards (stacked below)
-            &.next {
-                opacity: 0.4;
-                pointer-events: none;
+                opacity: 0.3;
+                z-index: -1;
+                border-radius: 16px;
             }
 
             .card_left {
-                width: 100%;
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                gap: 16px;
-                z-index: 2;
+                gap: 20px;
 
-                .h_text_2 {
-                    font-size: 36px;
-                    font-weight: 500;
-                    color: #fff;
-
-                    @media (max-width: 767px) {
-                        font-size: 24px;
-                    }
-                }
-
-                .p_text_3 {
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #B1B1B1;
-                    font-family: "Urbanist", sans-serif;
-                    width: 75%;
-
-                    @media (max-width: 767px) {
-                         font-size: 16px;
-                         width: 100%;
-                    }
-
-
-                }
-            }
-
-            .card_img {
-                z-index: 2;
-                border-radius: 8px;
-                margin-top: 40px;
-            }
-        }
-    }
-
-
-
-    @media (min-width: 768px) and (max-width: 991px) {
-        height: 850px;
-        margin-top: 100px;
-
-        .what_card {
-            padding: 30px;
-
-
-            .card_left {
                 .h_text_2 {
                     font-size: 28px;
+                    color: #fff;
                 }
 
                 .p_text_3 {
                     font-size: 16px;
-                    width: 100%;
-                    line-height: 1.5;
+                    color: #b1b1b1;
+                    font-family: "Urbanist", sans-serif;
+                    width: 75%;
                 }
             }
 
             .card_img {
-                order: 2;
+                margin-top: 60px;
+                border-radius: 12px;
+            }
+
+
+
+            &.visible {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                position: relative;
+                z-index: 3;
+                margin-top: -520px;
+            }
+
+            &:first-child.visible {
                 margin-top: 0;
-                margin-bottom: 30px;
-                width: 100%;
-                max-width: 300px;
-                height: auto;
+                background: linear-gradient(180deg, #2d0b03 0%, #1d0902 100%);
+            }
+
+            &:nth-child(2).visible {
+                background: linear-gradient(180deg, #3a0f05 0%, #270c02 100%);
+            }
+
+            &:nth-child(3).visible {
+                background: linear-gradient(180deg, #451106 0%, #300f03 100%);
+            }
+
+            &:nth-child(4).visible {
+                background: linear-gradient(180deg, #501308 0%, #3a0f05 100%);
             }
         }
     }
-
-    @media (max-width: 767px) {
-        height: auto;
-        margin-top: 80px;
-
-        .what_card {
-            border-radius: 12px;
-            flex-direction: column;
-            padding: 0;
-            background-color: red !important;
-
-            .card_left {
-                gap: 10px;
-
-                .h_text_2 {
-                    font-size: 24px;
-                }
-
-                .p_text_3 {
-                    font-size: 14px;
-                }
-            }
-
-            .card_img {
-                width: 100%;
-                height: auto;
-
-            }
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
