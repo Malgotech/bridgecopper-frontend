@@ -59,7 +59,7 @@ const BannerSection = () => {
         </div>
 
         <div
-          className={`${Style.bottom_left_positon}  tab-hide mobile-hide`}></div>
+          className={`${Style.bottom_left_positon} desktop-hide  tab-hide mobile-hide`}/> 
 
         <div className={`${Style.banner_bottom_content} tab-hide mobile-hide`}>
           <div className={Style.banner_bottom_container}>
