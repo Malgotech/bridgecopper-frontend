@@ -235,24 +235,7 @@
                 border-radius: 100px;
             }
         }
-
-
-        .bottom_left_positon {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            bottom: -10px;
-            left: 45.2%;
-            background-color: red;
-            z-index: -1;
-            border-bottom-right-radius: 30px;
-            clip-path: polygon(88% 71%, 100% 6%, 100% 100%, 0 99%, 26% 96%, 40% 93%, 54% 91%, 63% 88%, 74% 85%, 83% 79%);
-
-            @media (max-width: 1600px) {
-                bottom: -12px;
-                left: 42.5%;
-            }
-        }
+ 
 
 
 

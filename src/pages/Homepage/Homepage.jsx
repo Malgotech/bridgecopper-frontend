@@ -14,7 +14,7 @@ const Homepage = ({isActive}) => {
       <BannerSection/>
       <PremiumCopper/>
       <LondonMetal/>
-      <WhatWeDo isActive={isActive}/>
+      {/* <WhatWeDo isActive={isActive}/> */}
       <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>

@@ -58,9 +58,7 @@ const BannerSection = () => {
           <p className={Style.p_scroll}>Scroll Down</p>
         </div>
 
-        <div
-          className={`${Style.bottom_left_positon} desktop-hide  tab-hide mobile-hide`}/> 
-
+    
         <div className={`${Style.banner_bottom_content} tab-hide mobile-hide`}>
           <div className={Style.banner_bottom_container}>
             <img
