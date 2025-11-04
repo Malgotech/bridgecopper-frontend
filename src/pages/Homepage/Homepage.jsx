@@ -12,9 +12,9 @@ const Homepage = ({isActive}) => {
   return (
      <div className={Style.homepage}>
       <BannerSection/>
-      <PremiumCopper/>
+      {/* <PremiumCopper/> */}
       <LondonMetal/>
-      {/* <WhatWeDo isActive={isActive}/> */}
+      <WhatWeDo isActive={isActive}/>
       <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>
