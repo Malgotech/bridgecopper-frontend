@@ -11,10 +11,10 @@ import BannerSection from './components/BannerSection/BannerSection'
 const Homepage = ({isActive}) => {
   return (
      <div className={Style.homepage}>
-      <BannerSection/>
+      {/* <BannerSection/> */}
       <PremiumCopper/>
       <LondonMetal/>
-      {/* <WhatWeDo isActive={isActive}/> */}
+      <WhatWeDo isActive={isActive}/>
       <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>
