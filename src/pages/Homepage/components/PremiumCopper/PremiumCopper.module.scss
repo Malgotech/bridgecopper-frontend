@@ -101,6 +101,7 @@
                     left: 50%;
                     top: 0;
                     z-index: 10;
+                       animation: counterRotate 10s linear infinite;
 
                     @media (max-width: 767px) {
                         width: 40px;
@@ -118,6 +119,17 @@
                             font-size: 12px;
                         }
                     }
+
+                    
+            @keyframes counterRotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
                 }
 
                 @keyframes cuOrbit {

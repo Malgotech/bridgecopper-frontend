@@ -22,12 +22,13 @@
         height: 100%;
         border-radius: 30px;
         position: relative;
-        overflow: hidden;
         z-index: 1;
+        // overflow: hidden;
         padding: 100px 70px;
 
         @media (max-width: 767px) {
-            padding: 100px 20px;
+            height: 645px;
+            padding: 0px 20px;
         }
 
 
@@ -45,6 +46,13 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 24px;
+
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
 
             .h_text_1 {
                 font-size: 56px;
@@ -74,6 +82,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 20px;
+                border-radius: 28px;
 
                 @media (max-width: 767px) {
                     flex-direction: column;
@@ -169,6 +178,7 @@
         }
 
 
+
         .btn_explore {
             @media (max-width: 767px) {
                 width: 100%;
@@ -209,12 +219,15 @@
         }
 
 
+
+
+
         .bottom_left_positon {
             width: 100px;
             height: 100px;
             position: absolute;
             bottom: -10px;
-            left: 45%;
+            left: 45.2%;
             background-color: white;
             z-index: -1;
             border-bottom-right-radius: 30px;
@@ -226,7 +239,7 @@
             }
         }
 
-      
+
 
         .banner_vdo_content {
             width: 100%;
@@ -235,10 +248,15 @@
             top: 0;
             left: 0;
             z-index: -3;
+            border-radius: 28px;
+            overflow: hidden;
         }
 
 
     }
+
+
+
 
 
     .banner_bottom_content {
@@ -250,15 +268,6 @@
         right: 0;
         z-index: 10;
         border-top-left-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px 40px;
-
-
-
 
 
         @media (min-width: 300px) and (max-width: 991px) {
@@ -266,9 +275,51 @@
             position: static;
         }
 
-        @media (max-width: 767px) {
-            padding: 20px 0px;
+
+        .banner_bottom_container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            padding: 20px 40px;
+
+            @media (max-width: 767px) {
+                padding: 20px 0px;
+            }
+
+
+
+            .square_img {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                bottom: -7px;
+                left: -91px;
+                z-index: 11;
+                transform: translate(0, 0);
+                // filter: brightness(0) saturate(100%) invert(20%) sepia(28%) saturate(5816%) hue-rotate(355deg) brightness(95%) contrast(87%);
+            }
+
+            .square_img_right {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -93px;
+                right: -9px;
+                z-index: 11;
+                transform: translate(0, 0);
+                // filter: brightness(0) saturate(100%) invert(20%) sepia(28%) saturate(5816%) hue-rotate(355deg) brightness(95%) contrast(87%);
+            }
+
+
+
         }
+
+
 
 
         .p_text_2 {

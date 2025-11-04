@@ -3,7 +3,7 @@ import Style from "./BannerSection.module.scss";
 import Button from "../../../../components/common/Button/Button";
 import backgrundvdo from "../../../../assets/images/banner-background-vdo.mp4";
 import enami from "../../../../assets/images/enami.svg";
-import square from "../../../../assets/images/banner-square.png";
+import square from "../../../../assets/images/Subtract.png";
 
 const BannerSection = () => {
   return (
@@ -59,26 +59,68 @@ const BannerSection = () => {
         </div>
 
         <div
-          className={`${Style.bottom_left_positon} tab-hide mobile-hide`}></div>
-      
+          className={`${Style.bottom_left_positon}  tab-hide mobile-hide`}></div>
+
+        <div className={`${Style.banner_bottom_content} tab-hide mobile-hide`}>
+          <div className={Style.banner_bottom_container}>
+            <img
+              src={square}
+              alt="square"
+              className={`${Style.square_img}  tab-hide mobile-hide`}
+            />
+
+            <img
+              src={square}
+              alt="square"
+              className={`${Style.square_img_right}  tab-hide mobile-hide`}
+            />
+
+            <p className={`${Style.p_text_2} mobile-hide`}>
+              Partnered with entities
+            </p>
+            <div className={Style.bottom_container}>
+              <div className={Style.bottom_content}>
+                <p className={Style.p_text_3}>$10B</p>
+                <p className={Style.p_text_4}>in Copper Reserves</p>
+              </div>
+              <div className={Style.bottom_content}>
+                <p className={Style.p_text_3}>80+</p>
+                <p className={Style.p_text_4}>Years of Experience</p>
+              </div>
+              <div className={Style.bottom_content}>
+                <img src={enami} alt="enami" width={134} height={48} />
+                <p className={Style.p_text_4}>Chile Authorized</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className={Style.banner_bottom_content}>
-        <p className={`${Style.p_text_2} mobile-hide`}>
-          Partnered with entities
-        </p>
-        <div className={Style.bottom_container}>
-          <div className={Style.bottom_content}>
-            <p className={Style.p_text_3}>$10B</p>
-            <p className={Style.p_text_4}>in Copper Reserves</p>
-          </div>
-          <div className={Style.bottom_content}>
-            <p className={Style.p_text_3}>80+</p>
-            <p className={Style.p_text_4}>Years of Experience</p>
-          </div>
-          <div className={Style.bottom_content}>
-            <img src={enami} alt="enami" width={134} height={48} />
-            <p className={Style.p_text_4}>Chile Authorized</p>
+      <div className={`${Style.banner_bottom_content} desktop-hide`}>
+        <div className={Style.banner_bottom_container}>
+          <img
+            src={square}
+            alt="square"
+            className={`${Style.square_img}  tab-hide mobile-hide`}
+          />
+      
+
+          <p className={`${Style.p_text_2} mobile-hide`}>
+            Partnered with entities
+          </p>
+          <div className={Style.bottom_container}>
+            <div className={Style.bottom_content}>
+              <p className={Style.p_text_3}>$10B</p>
+              <p className={Style.p_text_4}>in Copper Reserves</p>
+            </div>
+            <div className={Style.bottom_content}>
+              <p className={Style.p_text_3}>80+</p>
+              <p className={Style.p_text_4}>Years of Experience</p>
+            </div>
+            <div className={Style.bottom_content}>
+              <img src={enami} alt="enami" width={134} height={48} />
+              <p className={Style.p_text_4}>Chile Authorized</p>
+            </div>
           </div>
         </div>
       </div>

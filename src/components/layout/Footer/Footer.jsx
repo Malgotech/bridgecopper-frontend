@@ -44,11 +44,11 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-
             <div className={Style.footer_head_right}>
               <p className={Style.p_text_2}>
                 Operating from Austria, Bridge Copper integrates mining,
-                trading, <br className="break"/> and logistics across continents.
+                trading, <br className="break" /> and logistics across
+                continents.
               </p>
 
               <Button title="Let's Connect" img={arrowImg} />
@@ -106,21 +106,18 @@ const Footer = () => {
           <div className={Style.hr_line} />
 
           <div className={Style.footer_bottom}>
-
             <p className={Style.p_text_3}>
-                © 2025 Bridge Copper Inc. | All Rights Reserved
+              © 2025 Bridge Copper Inc. | All Rights Reserved
             </p>
 
             <div className={Style.footer_bottom_right}>
-
-                <Link to="" className={Style.foot_link}>
+              <Link to="" className={Style.foot_link}>
                 Terms of Service
-                </Link>
-    <Link to="" className={Style.foot_link}>
-              Privacy Policy
-                </Link>
+              </Link>
+              <Link to="" className={Style.foot_link}>
+                Privacy Policy
+              </Link>
             </div>
-
           </div>
         </div>
       </div>
