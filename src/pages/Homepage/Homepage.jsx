@@ -7,6 +7,7 @@ import WhatWeDo from './components/WhatWeDo/WhatWeDo'
 import LondonMetal from './components/LondonMetal/LondonMetal'
 import PremiumCopper from './components/PremiumCopper/PremiumCopper'
 import BannerSection from './components/BannerSection/BannerSection'
+import ScrollStack from './components/ScrollStack/ScrollStack'
 
 const Homepage = ({isActive}) => {
   return (
@@ -15,6 +16,7 @@ const Homepage = ({isActive}) => {
       <PremiumCopper/>
       <LondonMetal/>
       <WhatWeDo isActive={isActive}/>
+      {/* <ScrollStack/> */}
       <GlobalSupply/>
       <PartnerShip/>
       <LeaderShip/>
