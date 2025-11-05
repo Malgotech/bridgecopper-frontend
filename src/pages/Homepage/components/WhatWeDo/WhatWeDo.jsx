@@ -5,7 +5,6 @@ import cardImg2 from "../../../../assets/images/what-card-img-2.svg";
 import cardImg3 from "../../../../assets/images/what-card-img-3.svg";
 import cardImg4 from "../../../../assets/images/what-card-img-1.svg";
 
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,7 +27,7 @@ const cards = [
   {
     title: "Trusted Partnerships",
     text: "Transparency and accountability are embedded throughout our operations, backed by international banks and  trade insurance providers. Our system is designed for long-term confidence",
-     image: cardImg4,
+    image: cardImg4,
   },
 ];
 
@@ -77,14 +76,15 @@ const WhatWeDo = ({ isActive }) => {
           <div className={Style.what_section_head_left}>
             <h2 className={Style.h_text_1}>What We Do?</h2>
             <p className={Style.p_text_1}>
-              Transparency and accountability define our relationships at every
-              stage.
+              Bridge Copper connects responsible copper production  <br className="break" />  with the
+              industries shaping tomorrow.
             </p>
           </div>
           <p className={Style.p_text_2}>
-            Bridge Copper collaborates with leading international banks and
-            trade insurance providers, building trust and stability for
-            long-term procurement and investment decisions.
+            Through direct partnerships with elite mines in Chile and Arizona,
+            and a fully <br className="break  " /> integrated value chain, we
+            ensure clients receive copper supply with maximum{" "}
+            <br className="break" /> reliability, transparency, and quality.
           </p>
         </div>
       </div>

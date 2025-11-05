@@ -1,27 +1,31 @@
-import React from 'react'
-import Style from "./Homepage.module.scss"
-import LeaderShip from './components/Leadership/LeaderShip'
-import PartnerShip from './components/PartnerShip/PartnerShip'
-import GlobalSupply from './components/GlobalSupply/GlobalSupply'
-import WhatWeDo from './components/WhatWeDo/WhatWeDo'
-import LondonMetal from './components/LondonMetal/LondonMetal'
-import PremiumCopper from './components/PremiumCopper/PremiumCopper'
-import BannerSection from './components/BannerSection/BannerSection'
-import ScrollStack from './components/ScrollStack/ScrollStack'
+import React from "react";
+import Style from "./Homepage.module.scss";
+import LeaderShip from "./components/Leadership/LeaderShip";
+import PartnerShip from "./components/PartnerShip/PartnerShip";
+import GlobalSupply from "./components/GlobalSupply/GlobalSupply";
+import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
+import LondonMetal from "./components/LondonMetal/LondonMetal";
+import PremiumCopper from "./components/PremiumCopper/PremiumCopper";
+import BannerSection from "./components/BannerSection/BannerSection";
+import ScrollStack from "./components/ScrollStack/ScrollStack";
 
-const Homepage = ({isActive}) => {
+const Homepage = ({ isActive }) => {
   return (
-     <div className={Style.homepage}>
-      <BannerSection/>
-      <PremiumCopper/>
-      <LondonMetal/>
-      <WhatWeDo isActive={isActive}/>
-      {/* <ScrollStack/> */}
-      <GlobalSupply/>
-      <PartnerShip/>
-      <LeaderShip/>
-     </div>
-  )
-}
+    <div className={Style.homepage}>
+      <BannerSection />
+      <PremiumCopper />
+      <LondonMetal />
+      <WhatWeDo isActive={isActive} />
 
-export default Homepage
+      <div className="w-100  ">
+        <GlobalSupply />
+        <ScrollStack />
+      </div>
+
+      <PartnerShip />
+      <LeaderShip />
+    </div>
+  );
+};
+
+export default Homepage;

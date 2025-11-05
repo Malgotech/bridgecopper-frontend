@@ -9,10 +9,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
- 
 
-
-        .stone_img {
+        .container {
             width: 100%;
             height: auto;
             position: absolute;
@@ -21,17 +19,29 @@
             z-index: 1000;
 
             @media (min-width: 768px) and (max-width: 991px) {
-                width: 70%;
                 top: 5%;
-                right: 15%;
+                left: 65%;
+                transform: translateX(-50%);
             }
 
             @media (max-width: 767px) {
-                width: 70%;
-                  top: 10%;
-                right: 15%;                
- 
+                top: 5%;
+                right: -20px;
+
             }
+        }
+
+
+        .stone_img {
+            width: 100%;
+            height: auto;
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 70%;
+            }
+
+            @media (max-width: 767px) {
+                width: 90%;            }
 
         }
 

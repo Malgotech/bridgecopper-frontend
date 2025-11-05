@@ -67,7 +67,10 @@
          @media (max-width:991px) and (min-width:320px) {
              width: 100%;
              max-height: 60vh;
-             background: var(--bg_background_1);
+             background: rgba(255, 255, 255, 0.21);
+             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+             backdrop-filter: blur(40px);
+             -webkit-backdrop-filter: blur(11.4px);
              position: absolute;
              top: 70px;
              left: 0;
@@ -78,7 +81,6 @@
              justify-content: center;
              gap: 20px;
              padding: 30px 0px;
-             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 
              ul {
                  width: 100%;
@@ -98,6 +100,6 @@
  .shadow {
      background: rgba(255, 255, 255, 0.21);
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(11.4px);
+     backdrop-filter: blur(40px);
      -webkit-backdrop-filter: blur(11.4px);
  }
