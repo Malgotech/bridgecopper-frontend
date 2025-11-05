@@ -9,7 +9,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
- 
+
 
 
         .stone_img {
@@ -27,11 +27,11 @@
             }
 
             @media (max-width: 767px) {
-                width: 60%;
+                width: 70%;
                 height: auto;
-                  top: 16%;
-                right:55px;   
- 
+                top: 16%;
+                right: 12%;
+                transform: translate(50%, -50%);
             }
 
         }
