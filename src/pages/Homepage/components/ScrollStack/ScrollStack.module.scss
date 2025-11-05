@@ -1,7 +1,8 @@
  .scroll_section {
    width: 100%;
    position: relative;
-   height: 500vh;
+   height: 300vh;
+   /* shorter = faster scroll */
    view-timeline-name: --horizontalScroll;
    view-timeline-axis: block;
  }
@@ -31,7 +32,6 @@
  .cards_wrapper {
    display: flex;
    width: max-content;
-   height: 100%;
    gap: 40px;
    transform: translateX(0);
 
@@ -104,8 +104,7 @@
    }
 
    100% {
-     // Calculate based on total cards width minus viewport width plus padding
-     transform: translateX(calc(-120% + 100vw - 18%));
+     transform: translateX(calc(-150% + 100vw - 2%));
    }
  }
 
@@ -117,7 +116,7 @@
      }
 
      100% {
-       transform: translateX(calc(-110% + 100vw - 10%));
+       transform: translateX(calc(-130% + 100vw - 2%));
      }
    }
  }
