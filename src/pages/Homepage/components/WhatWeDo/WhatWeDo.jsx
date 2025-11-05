@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Style from "./WhatWeDo.module.scss";
-import cardImg1 from "../../../../assets/images/what-card-img-1-new.svg";
-import cardImg2 from "../../../../assets/images/what-card-img-2.svg";
-import cardImg3 from "../../../../assets/images/what-card-img-3.svg";
-import cardImg4 from "../../../../assets/images/what-card-img-1.svg";
+import cardImg1 from "../../../../assets/images/what-card-img-1.webp";
+import cardImg2 from "../../../../assets/images/what-card-img-2.webp";
+import cardImg3 from "../../../../assets/images/what-card-img-3.webp";
+import cardImg4 from "../../../../assets/images/what-card-img-4.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

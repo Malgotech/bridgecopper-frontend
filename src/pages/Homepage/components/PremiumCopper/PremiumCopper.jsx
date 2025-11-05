@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Style from "./PremiumCopper.module.scss";
-import stone from "../../../../assets/images/copper-stone.svg";
+import stone from "../../../../assets/images/stone.webp";
 import Button from "../../../../components/common/Button/Button";
 
 const PremiumCopper = () => {

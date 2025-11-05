@@ -1,6 +1,9 @@
 import React from "react";
 import Style from "./ScrollStack.module.scss";
-import cardImg1 from "../../../../assets/images/global-card-1.svg";
+import cardImg1 from "../../../../assets/images/global-card-1.webp";
+import cardImg2 from "../../../../assets/images/global-card-2.webp";
+import cardImg3 from "../../../../assets/images/global-card-3.webp";
+import cardImg4 from "../../../../assets/images/global-card-4.webp";
 
 const ScrollStack = () => {
   return (
@@ -17,7 +20,7 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
-            <img src={cardImg1} alt="global-card" className={Style.card_img} />
+            <img src={cardImg2} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>Vast Reserves</p>
               <p className={Style.p_text_4}>
@@ -26,7 +29,7 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
-            <img src={cardImg1} alt="global-card" className={Style.card_img} />
+            <img src={cardImg3} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>Legacy Leadership</p>
               <p className={Style.p_text_4}>
@@ -36,7 +39,7 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
-            <img src={cardImg1} alt="global-card" className={Style.card_img} />
+            <img src={cardImg4} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>World Reach</p>
               <p className={Style.p_text_4}>

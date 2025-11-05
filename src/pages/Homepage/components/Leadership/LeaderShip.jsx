@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "./LeaderShip.module.scss";
-import clientImg from "../../../../assets/images/client-img.svg";
-import cardImg from "../../../../assets/images/leader-card-img.svg";
+import cardImg from "../../../../assets/images/leader-img.webp";
+import clientImg from "../../../../assets/images/client-img.webp";
 
 const LeaderShip = () => {
   return (
@@ -19,7 +19,7 @@ const LeaderShip = () => {
             <div className="col-xxl-6 col-lg-5 col-md-6 col-12  ">
               <div className={Style.leadership_content_left}>
                 <img
-                  src={clientImg}
+                  src={cardImg}
                   alt="founder"
                   width={500}
                   height={620}
@@ -56,7 +56,7 @@ const LeaderShip = () => {
             <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <img
-                  src={cardImg}
+                  src={clientImg}
                   alt="card"
                   width={286}
                   height={356}
@@ -74,7 +74,7 @@ const LeaderShip = () => {
                <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <img
-                  src={cardImg}
+                  src={clientImg}
                   alt="card"
                   width={286}
                   height={356}
@@ -92,7 +92,7 @@ const LeaderShip = () => {
                <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <img
-                  src={cardImg}
+                  src={clientImg}
                   alt="card"
                   width={286}
                   height={356}
@@ -110,13 +110,12 @@ const LeaderShip = () => {
                <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <img
-                  src={cardImg}
+                  src={clientImg}
                   alt="card"
-                  width={286}
-                  height={356}
+                  width={300}
+                  height={400}
                   className={Style.card_img}
                 />
-
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
                     <p className={Style.name}>Shai Dzindzihashvili</p>
