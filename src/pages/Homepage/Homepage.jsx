@@ -17,7 +17,7 @@ const Homepage = ({ isActive }) => {
       <LondonMetal />
       <WhatWeDo isActive={isActive} />
 
-      <div className="w-100  ">
+      <div className="w-100">
         <GlobalSupply />
         <ScrollStack />
       </div>

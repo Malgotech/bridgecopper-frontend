@@ -1,111 +1,132 @@
 .scroll_section {
-    width: 100%;
-    position: relative;
-    height:  100vh;
-    view-timeline-name: --horizontalScroll;
-    view-timeline-axis: block;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  view-timeline-name: --horizontalScroll;
+  view-timeline-axis: block;
+  margin-top: 20px;
 }
 
-.sticky_container {
-    position: sticky;
-    top: 100px;
-    height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 18%;
+/* helper classes if you had different classNames for responsive hiding */
+.tabHide { /* keep whatever rules you had */ }
+.mobileHide { /* keep whatever rules you had */ }
 
-    @media (max-width: 1600px) {
-        padding-left: 10%;
-    }
+.sticky_container {
+  position: sticky;
+  top: 100px;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 18%;
+
+  @media (max-width: 1600px) {
+    padding-left: 10%;
+  }
 }
 
 .cards_wrapper {
-    display: flex;
-    width: max-content;
-    height: 100%;
-    gap: 40px;
-    transform: translateX(0);
+  display: flex;
+  width: max-content;
+  height: 100%;
+  gap: 40px;
+  transform: translateX(0);
 
-    /* Scroll-driven animation */
-    animation: horizontalMove linear both;
-    animation-timeline: --horizontalScroll;
-    animation-range: entry 0% exit 100%;
+  /* Scroll-driven animation (always defined) */
+  animation: horizontalMove linear both;
+  animation-timeline: --horizontalScroll;
+  animation-range: entry 0% exit 100%;
+
+  /* IMPORTANT: when not active, force transform to origin to prevent the timeline from visually moving cards / letting section scroll away */
+  /* this override prevents the animation from shifting layout when inactive */
+  /* use higher specificity to make sure it overrides the animation transform */
+  transform: translateX(0);
+}
+
+/* When active (hover / pointer inside OR toggled with JS), allow the animation to run and remove the forced transform override */
+.scroll_section.is-active .cards_wrapper {
+  /* Remove the forced static transform so the animation can apply transforms from the timeline */
+  transform: none;
+  /* Ensure animation runs (some browsers may respect running state) */
+  animation-play-state: running;
+}
+
+/* If you want desktop-only hover without JS you can keep this, JS makes it reliable across devices */
+.scroll_section:hover .cards_wrapper {
+  transform: none;
+  animation-play-state: running;
 }
 
 .global_card {
-    width: 400px;
-    height: 480px;
-    flex: 0 0 400px;
-    backdrop-filter: blur(32px);
-    background: #0000003d;
-    border-radius: 24px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
+  width: 400px;
+  height: 480px;
+  flex: 0 0 400px;
+  backdrop-filter: blur(32px);
+  background: #0000003d;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 
-    @media (max-width: 767px) {
-        width: 300px;
-        height: 380px;
+  @media (max-width: 767px) {
+    width: 300px;
+    height: 380px;
+  }
+
+  .card_img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    .p_text_3 {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-white);
     }
 
-    .card_img {
-        width: 100%;
-        height: auto;
+    .p_text_4 {
+      font-size: 18px;
+      font-weight: 400;
+      color: #ffffffcc;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
     }
-
-    .card_content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 10px;
-        padding: 20px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-
-        .p_text_3 {
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--text-white);
-        }
-
-        .p_text_4 {
-            font-size: 18px;
-            font-weight: 400;
-            color: #ffffffcc;
-
-            @media (max-width: 767px) {
-                font-size: 16px;
-            }
-        }
-    }
+  }
 }
 
+/* Keyframes remain the same */
 @keyframes horizontalMove {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(-3.2 * (100% - 100vw + 18%)));
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-3.2 * (100% - 100vw + 18%)));
+  }
 }
-
-
 
 @media (max-width: 1600px) {
-    @keyframes horizontalMove {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(calc(-1.2 * (100% - 100vw + 18%)));
-        }
+  @keyframes horizontalMove {
+    from {
+      transform: translateX(0);
     }
+    to {
+      transform: translateX(calc(-1.2 * (100% - 100vw + 18%)));
+    }
+  }
 }
