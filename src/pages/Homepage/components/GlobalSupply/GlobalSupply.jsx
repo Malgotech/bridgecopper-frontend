@@ -4,31 +4,37 @@ import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import Style from "./GlobalSupply.module.scss";
-import cardImg1 from "../../../../assets/images/global-card-swiper-img-1.svg";
-import ScrollStack from "../ScrollStack/ScrollStack";
+import cardImg1 from "../../../../assets/images/global-card-1.webp";
+import cardImg2 from "../../../../assets/images/global-card-2.webp";
+import cardImg3 from "../../../../assets/images/global-card-3.webp";
+import cardImg4 from "../../../../assets/images/global-card-4.webp";
 
 const cardData = [
   {
     title: "ENAMI Approved",
     desc: "Direct partnerships with ENAMI-authorized miners in Chile",
+    image: cardImg1,
   },
   {
     title: "Global Reach",
     desc: "Working with sustainable mining networks worldwide",
+    image: cardImg2,
   },
   {
     title: "Verified Partners",
     desc: "All our sources are government verified and audited",
+    image: cardImg3,
   },
   {
     title: "Eco-Friendly Mining",
     desc: "Focused on environmentally conscious practices",
+    image: cardImg4,
   },
 ];
 
 const GlobalSupply = () => {
   return (
-    <section className={Style.global_section} >
+    <section className={Style.global_section}>
       <div className="custom-container">
         <div className={Style.global_section_head}>
           <div className={Style.global_section_head_left}>
@@ -49,14 +55,13 @@ const GlobalSupply = () => {
         </div>
       </div>
 
-
       <div className="custom-container mt-5">
         <div className="row   g-2 desktop-hide">
           {cardData.map((card, index) => (
             <div className="col-md-6 col-12" key={index}>
               <div className={Style.global_card}>
                 <img
-                  src={cardImg1}
+                  src={card.image}
                   alt={card.title}
                   className={Style.card_img}
                 />

@@ -6,6 +6,8 @@ import cardImg2 from "../../../../assets/images/partner-card-img-2.svg";
 import cardImg3 from "../../../../assets/images/partner-card-img-3.svg";
 import cardImg4 from "../../../../assets/images/partner-card-img-4.svg";
 
+
+
 const PartnerShip = () => {
   return (
     <section className="custom-container">
