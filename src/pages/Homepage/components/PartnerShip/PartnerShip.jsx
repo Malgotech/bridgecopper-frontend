@@ -1,10 +1,10 @@
 import React from "react";
 import Style from "./PartnerShip.module.scss";
-import partnerImg from "../../../../assets/images/partner-img.svg";
-import cardImg1 from "../../../../assets/images/partner-card-img-1.svg";
-import cardImg2 from "../../../../assets/images/partner-card-img-2.svg";
-import cardImg3 from "../../../../assets/images/partner-card-img-3.svg";
-import cardImg4 from "../../../../assets/images/partner-card-img-4.svg";
+import partnerImg from "../../../../assets/images/parter-img.webp";
+import cardImg1 from "../../../../assets/images/partner-card-img-1.webp";
+import cardImg2 from "../../../../assets/images/partner-card-img-2.webp";
+import cardImg3 from "../../../../assets/images/partner-card-img-3.webp";
+import cardImg4 from "../../../../assets/images/partner-card-img-4.webp";
 
 
 

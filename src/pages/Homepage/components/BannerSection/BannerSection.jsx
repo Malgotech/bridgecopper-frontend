@@ -2,7 +2,7 @@ import React from "react";
 import Style from "./BannerSection.module.scss";
 import Button from "../../../../components/common/Button/Button";
 import backgrundvdo from "../../../../assets/images/banner-background-vdo.mp4";
-import enami from "../../../../assets/images/enami.svg";
+import enami from "../../../../assets/images/enami.webp";
 import square from "../../../../assets/images/Subtract.png";
 import bannerImg from "../../../../assets/images/banner-img.webp";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Style from "./Footer.module.scss";
-import tick from "../../../assets/images/tick.svg";
+import tick from "../../../assets/images/tick.webp";
 import Button from "../../common/Button/Button";
-import arrowImg from "../../../assets/images/btn-arrow-img.svg";
-import footerLogo from "../../../assets/images/footer-logo.svg";
+import arrowImg from "../../../assets/images/btn-arrow-img.webp";
+import footerLogo from "../../../assets/images/footer-logo.webp";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
