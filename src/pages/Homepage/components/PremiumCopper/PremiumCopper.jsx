@@ -4,32 +4,26 @@ import stone from "../../../../assets/images/copper-stone.svg";
 import Button from "../../../../components/common/Button/Button";
 
 const PremiumCopper = () => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [rotation, setRotation] = useState(0);
   const isDragging = useRef(false);
-  const startPos = useRef({ x: 0, y: 0 });
-  const startRotation = useRef({ x: 0, y: 0 });
+  const startXRef = useRef(0);
+  const startRotationRef = useRef(0);
 
   const handleStart = (e) => {
     isDragging.current = true;
-    const { clientX, clientY } = e.touches ? e.touches[0] : e;
-    startPos.current = { x: clientX, y: clientY };
-    startRotation.current = rotation;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    startXRef.current = x;
+    startRotationRef.current = rotation;
   };
 
   const handleMove = (e) => {
     if (!isDragging.current) return;
 
-    const { clientX, clientY } = e.touches ? e.touches[0] : e;
-    const deltaX = clientX - startPos.current.x;
-    const deltaY = clientY - startPos.current.y;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    const deltaX = x - startXRef.current;
 
-    // Adjust sensitivity (lower = slower rotation)
-    const sensitivity = 0.4;
-
-    setRotation({
-      x: startRotation.current.x - deltaY * sensitivity, // vertical movement = X-axis rotation
-      y: startRotation.current.y + deltaX * sensitivity, // horizontal movement = Y-axis rotation
-    });
+    const newRotation = (startRotationRef.current + deltaX) % 360;
+    setRotation(newRotation);
   };
 
   const handleEnd = () => {
@@ -42,35 +36,22 @@ const PremiumCopper = () => {
         <div className="row w-100">
           <div className="col-lg-6 col-md-12 col-12">
             <div className={Style.premium_section_left}>
-              <div
-                className={Style.container}
-                onMouseDown={handleStart}
-                onMouseMove={handleMove}
-                onMouseUp={handleEnd}
-                onMouseLeave={handleEnd}
-                onTouchStart={handleStart}
-                onTouchMove={handleMove}
-                onTouchEnd={handleEnd}
-                style={{ touchAction: "none"   }}>
-                <div
-                  className={Style.inner_wrapper}
-                  style={{
-                    transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-                    cursor: isDragging.current ? "grabbing" : "grab",
-                    transition: isDragging.current
-                      ? "none"
-                      : "transform 0.15s ease-out",
-                  }}>
-                  <img
-                    src={stone}
-                    alt="stone"
-                    width={479}
-                    height={479}
-                    className={Style.stone_img}
-                    draggable="false"
-                  />
-                </div>
-              </div>
+              <img
+                src={stone}
+                alt="stone"
+                width={479}
+                height={479}
+                className={Style.stone_img}
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                  cursor: isDragging.current ? "grabbing" : "grab",
+                  userSelect: "none",
+                  transition: isDragging.current
+                    ? "none"
+                    : "transform 0.1s ease-out",
+                }}
+                draggable="false"
+              />
 
               <div
                 className={`${Style.round_container} ${Style.round_container_1}`}>
