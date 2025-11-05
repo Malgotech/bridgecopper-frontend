@@ -1,35 +1,9 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import Style from "./PremiumCopper.module.scss";
 import stone from "../../../../assets/images/stone.webp";
 import Button from "../../../../components/common/Button/Button";
 
 const PremiumCopper = () => {
-  const [rotation, setRotation] = useState(0);
-  const isDragging = useRef(false);
-  const startXRef = useRef(0);
-  const startRotationRef = useRef(0);
-
-  const handleStart = (e) => {
-    isDragging.current = true;
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    startXRef.current = x;
-    startRotationRef.current = rotation;
-  };
-
-  const handleMove = (e) => {
-    if (!isDragging.current) return;
-
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const deltaX = x - startXRef.current;
-
-    const newRotation = (startRotationRef.current + deltaX) % 360;
-    setRotation(newRotation);
-  };
-
-  const handleEnd = () => {
-    isDragging.current = false;
-  };
-
   return (
     <section className="custom-container  ">
       <div className={Style.premium_section}>
@@ -42,15 +16,6 @@ const PremiumCopper = () => {
                 width={479}
                 height={479}
                 className={Style.stone_img}
-                style={{
-                  transform: `rotate(${rotation}deg)`,
-                  cursor: isDragging.current ? "grabbing" : "grab",
-                  userSelect: "none",
-                  transition: isDragging.current
-                    ? "none"
-                    : "transform 0.1s ease-out",
-                }}
-                draggable="false"
               />
 
               <div
