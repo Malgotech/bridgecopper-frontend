@@ -1,150 +1,151 @@
-.scroll_section {
-  width: 100%;
-  position: relative;
-  height: 500vh; // Increased height for longer scroll duration
-  view-timeline-name: --horizontalScroll;
-  view-timeline-axis: block;
-}
+ .scroll_section {
+   width: 100%;
+   position: relative;
+   height: 500vh;
+   view-timeline-name: --horizontalScroll;
+   view-timeline-axis: block;
+ }
 
 
-.sticky_container {
-  position: sticky;
-  top: 300px;
-  height: 600px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 18%;
+ .sticky_container {
+   position: sticky;
+   top: 300px;
+   height: 600px;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding-left: 18%;
+   background: #fff;
 
-  @media (max-width: 1600px) {
-    padding-left: 10%;
-  }
+   @media (max-width: 1600px) {
+     padding-left: 10%;
+   }
 
-  @media (max-width: 767px) {
-    padding-left: 5%;
-    height: 500px;
-  }
-}
+   @media (max-width: 767px) {
+     padding-left: 5%;
+     height: 500px;
+   }
+ }
 
-.cards_wrapper {
-  display: flex;
-  width: max-content;
-  height: 100%;
-  gap: 40px;
-  transform: translateX(0);
+ .cards_wrapper {
+   display: flex;
+   width: max-content;
+   height: 100%;
+   gap: 40px;
+   transform: translateX(0);
 
-  /* Scroll-driven animation */
-  animation: horizontalMove linear both;
-  animation-timeline: --horizontalScroll;
-  animation-range: entry 0% exit 100%;
-}
+   /* Scroll-driven animation */
+   animation: horizontalMove linear both;
+   animation-timeline: --horizontalScroll;
+   animation-range: entry 0% exit 100%;
+ }
 
-.global_card {
-  width: 400px;
-  height: 480px;
-  flex: 0 0 400px;
-  backdrop-filter: blur(32px);
-  background: #0000003d;
-  border-radius: 24px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+ .global_card {
+   width: 400px;
+   height: 480px;
+   flex: 0 0 400px;
+   backdrop-filter: blur(32px);
+   background: #0000003d;
+   border-radius: 24px;
+   overflow: hidden;
+   position: relative;
+   z-index: 1;
 
-  @media (max-width: 767px) {
-    width: 300px;
-    height: 380px;
-    flex: 0 0 300px;
-  }
+   @media (max-width: 767px) {
+     width: 300px;
+     height: 380px;
+     flex: 0 0 300px;
+   }
 
-  .card_img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+   .card_img {
+     width: 100%;
+     height: auto;
+     display: block;
+   }
 
-  .card_content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
+   .card_content {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;
+     gap: 10px;
+     padding: 20px;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     z-index: 10;
 
-    .p_text_3 {
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--text-white);
-      margin: 0;
-    }
+     .p_text_3 {
+       font-size: 20px;
+       font-weight: 500;
+       color: var(--text-white);
+       margin: 0;
+     }
 
-    .p_text_4 {
-      font-size: 18px;
-      font-weight: 400;
-      color: #ffffffcc;
-      margin: 0;
+     .p_text_4 {
+       font-size: 18px;
+       font-weight: 400;
+       color: #ffffffcc;
+       margin: 0;
 
-      @media (max-width: 767px) {
-        font-size: 16px;
-      }
-    }
-  }
-}
+       @media (max-width: 767px) {
+         font-size: 16px;
+       }
+     }
+   }
+ }
 
-// Main animation for desktop
-@keyframes horizontalMove {
-  0% {
-    transform: translateX(0);
-  }
+ // Main animation for desktop
+ @keyframes horizontalMove {
+   0% {
+     transform: translateX(0);
+   }
 
-  100% {
-    // Calculate based on total cards width minus viewport width plus padding
-    transform: translateX(calc(-120% + 100vw - 18%));
-  }
-}
+   100% {
+     // Calculate based on total cards width minus viewport width plus padding
+     transform: translateX(calc(-120% + 100vw - 18%));
+   }
+ }
 
-// Adjustments for different screen sizes
-@media (max-width: 1600px) {
-  @keyframes horizontalMove {
-    0% {
-      transform: translateX(0);
-    }
+ // Adjustments for different screen sizes
+ @media (max-width: 1600px) {
+   @keyframes horizontalMove {
+     0% {
+       transform: translateX(0);
+     }
 
-    100% {
-      transform: translateX(calc(-110% + 100vw - 10%));
-    }
-  }
-}
+     100% {
+       transform: translateX(calc(-110% + 100vw - 10%));
+     }
+   }
+ }
 
-@media (max-width: 767px) {
-  @keyframes horizontalMove {
-    0% {
-      transform: translateX(0);
-    }
+ @media (max-width: 767px) {
+   @keyframes horizontalMove {
+     0% {
+       transform: translateX(0);
+     }
 
-    100% {
-      transform: translateX(calc(-100% + 100vw - 5%));
-    }
-  }
+     100% {
+       transform: translateX(calc(-100% + 100vw - 5%));
+     }
+   }
 
-  .cards_wrapper {
-    gap: 20px;
-  }
-}
+   .cards_wrapper {
+     gap: 20px;
+   }
+ }
 
-// Fallback for browsers that don't support view-timeline
-@supports not (animation-timeline: view()) {
-  .scroll_section {
-    height: 100vh;
-    overflow: hidden;
-  }
+ // Fallback for browsers that don't support view-timeline
+ @supports not (animation-timeline: view()) {
+   .scroll_section {
+     height: 100vh;
+     overflow: hidden;
+   }
 
-  .cards_wrapper {
-    animation: none;
-  }
-}
+   .cards_wrapper {
+     animation: none;
+   }
+ }
