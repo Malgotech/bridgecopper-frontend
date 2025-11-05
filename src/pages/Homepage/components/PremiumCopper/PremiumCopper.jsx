@@ -5,7 +5,7 @@ import Button from "../../../../components/common/Button/Button";
 
 const PremiumCopper = () => {
   return (
-    <section className="custom-container  ">
+    <section className="custom-container" id="copper">
       <div className={Style.premium_section}>
         <div className="row w-100">
           <div className="col-lg-6 col-md-12 col-12">

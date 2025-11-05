@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Style from "./Navbar.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../common/Button/Button";
 import logo from "../../../assets/images/header-logo.svg";
 import { LuMenu } from "react-icons/lu";
@@ -9,7 +9,45 @@ import { IoClose } from "react-icons/io5";
 const Navbar = ({ setThirdSectionActive }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-   const [bgChange, setBgChange] = useState(false);
+  const [bgChange, setBgChange] = useState(false);
+
+  const navigate = useNavigate();
+
+  const goToThirdSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("copper");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  const goToLeaderSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("leader");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  const goToNetworkSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("network");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   const handleNav = () => {
     setIsOpen(!isOpen);
@@ -71,23 +109,28 @@ const Navbar = ({ setThirdSectionActive }) => {
           <nav className={`${Style.header_nav}`}>
             <ul className="mobile-hide ">
               <li>
-                <Link to="/" className={`${Style.nav_link} `}>
+                <Link
+                  to="#copper"
+                  onClick={goToThirdSection}
+                  className={`${Style.nav_link} `}>
                   Our Copper
                 </Link>
               </li>
               <li>
-                <Link to="/plans" className={`${Style.nav_link}  `}>
+                <Link
+                  to="#network"
+                  onClick={goToNetworkSection}
+                  className={`${Style.nav_link}  `}>
                   Our Network
                 </Link>
               </li>
+
               <li>
-                <Link to="/plots" className={`${Style.nav_link} `}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className={`${Style.nav_link}  `}>
-                  Vision
+                <Link
+                  to="#leader"
+                  onClick={goToLeaderSection}
+                  className={`${Style.nav_link}  `}>
+                  Our LeaderShip
                 </Link>
               </li>
 
@@ -103,26 +146,31 @@ const Navbar = ({ setThirdSectionActive }) => {
             </button>
           </nav>
           {isOpen && (
-            <div className={Style.mobile_nav}>
+            <div className={Style.mobile_nav}  onClick={handleNav}>
               <ul>
                 <li>
-                  <Link to="/" className={`${Style.nav_link} `}>
+                  <Link
+                    to="#copper"
+                    onClick={goToThirdSection}
+                    className={`${Style.nav_link} `}>
                     Our Copper
                   </Link>
                 </li>
                 <li>
-                  <Link to="/plans" className={`${Style.nav_link}  `}>
+                  <Link
+                    to="#network"
+                    onClick={goToNetworkSection}
+                    className={`${Style.nav_link}  `}>
                     Our Network
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/plots" className={`${Style.nav_link} `}>
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/faq" className={`${Style.nav_link}  `}>
-                    Vision
+                  <Link
+                    to="#leader"
+                    onClick={goToLeaderSection}
+                    className={`${Style.nav_link}  `}>
+                    Our LeaderShip
                   </Link>
                 </li>
 

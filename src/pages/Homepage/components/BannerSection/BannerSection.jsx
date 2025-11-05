@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "./BannerSection.module.scss";
 import Button from "../../../../components/common/Button/Button";
-import backgrundvdo from "../../../../assets/images/banner-background-vdo.mp4";
+import backgrundvdo from "../../../../assets/images/CopperConcentrateVideo.webm";
 import enami from "../../../../assets/images/enami.webp";
 import square from "../../../../assets/images/Subtract.png";
 import bannerImg from "../../../../assets/images/banner-img.webp";
@@ -25,26 +25,9 @@ const BannerSection = () => {
               position: "absolute",
               top: 0,
               left: 0,
-              display: "none",
             }}
           />
-
-          <img
-            src={bannerImg}
-            alt="banner "
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              position: "absolute",
-              top: 0,
-              left: 0,
-            }}
-          />
-
           <div className={Style.vdo_blur} />
-
-
         </div>
 
         <div className={Style.banner_content_top}>

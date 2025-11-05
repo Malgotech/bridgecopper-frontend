@@ -5,7 +5,7 @@ import clientImg from "../../../../assets/images/client-img.webp";
 
 const LeaderShip = () => {
   return (
-    <section className="custom-container">
+    <section className="custom-container" id="leader">
       <div className={Style.leadership_section}>
         <h2 className={Style.h_text_1}>Leadership</h2>
 

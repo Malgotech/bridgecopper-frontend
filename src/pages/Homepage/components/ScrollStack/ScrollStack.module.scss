@@ -32,7 +32,7 @@
  .cards_wrapper {
    display: flex;
    width: max-content;
-   gap: 40px;
+   gap: 32px;
    transform: translateX(0);
 
    /* Scroll-driven animation */
@@ -104,7 +104,7 @@
    }
 
    100% {
-     transform: translateX(calc(-120% + 100vw - 2%));
+     transform: translateX(calc(-140% + 100vw - 6%));
    }
  }
 

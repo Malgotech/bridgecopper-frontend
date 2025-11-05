@@ -4,13 +4,51 @@ import tick from "../../../assets/images/tick.webp";
 import Button from "../../common/Button/Button";
 import arrowImg from "../../../assets/images/btn-arrow-img.webp";
 import footerLogo from "../../../assets/images/footer-logo.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const goToThirdSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("copper");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  const goToLeaderSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("leader");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  const goToNetworkSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("network");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <footer className={Style.footer}>
       <div className="custom-container">
@@ -64,24 +102,25 @@ const Footer = () => {
             />
 
             <div className={Style.footer_nav}>
-              <Link to="/" className={Style.foot_link}>
-                Home
-              </Link>
-              <Link to="/" className={Style.foot_link}>
+              <Link
+                to="#copper"
+                className={Style.foot_link}
+                onClick={goToThirdSection}>
                 {" "}
                 Our Copper
               </Link>
-              <Link to="/" className={Style.foot_link}>
+              <Link
+                to="#network"
+                onClick={goToNetworkSection}
+                className={Style.foot_link}>
                 {" "}
                 Our Network
               </Link>
-              <Link to="/" className={Style.foot_link}>
-                {" "}
-                About us
-              </Link>
-              <Link to="/" className={Style.foot_link}>
-                {" "}
-                Vision
+              <Link
+                to="#leader"
+                onClick={goToLeaderSection}
+                className={Style.foot_link}>
+                Our LeaderShip
               </Link>
             </div>
 
