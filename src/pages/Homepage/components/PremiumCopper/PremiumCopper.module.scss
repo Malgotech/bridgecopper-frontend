@@ -12,6 +12,7 @@
 
 
 
+
         .stone_img {
             width: 100%;
             height: auto;
@@ -20,6 +21,7 @@
             right: -10px;
             z-index: 1000;
 
+
             @media (min-width: 768px) and (max-width: 991px) {
                 width: 70%;
                 top: 5%;
@@ -27,11 +29,11 @@
             }
 
             @media (max-width: 767px) {
-                 width: 263px;
-                 height: auto;
-                 top: 20px;
-                 right: 20px;
-                 
+                width: 263px;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
         }
