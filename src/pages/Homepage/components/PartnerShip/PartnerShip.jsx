@@ -6,8 +6,6 @@ import cardImg2 from "../../../../assets/images/partner-card-img-2.webp";
 import cardImg3 from "../../../../assets/images/partner-card-img-3.webp";
 import cardImg4 from "../../../../assets/images/partner-card-img-4.webp";
 
-
-
 const PartnerShip = () => {
   return (
     <section className="custom-container">
@@ -89,10 +87,11 @@ const PartnerShip = () => {
           <div
             className={`${Style.partner_card} ${Style.partner_card_bottom_left}`}>
             <div className={Style.card_body_bottom}>
-              <h3 className={Style.h_text_2}>Bank Support</h3>
+              <h3 className={Style.h_text_2}>Future Vision</h3>
               <p className={Style.p_text_3}>
-                We work with trusted global banks, ensuring every transaction is
-                swift, secure, and fully verified for financial confidence.
+                Leadership with fresh perspective and deep industry roots
+                propels Bridge Copper towards new opportunities and sustained
+                excellence.
               </p>
 
               <img
@@ -107,10 +106,11 @@ const PartnerShip = () => {
           <div
             className={`${Style.partner_card} ${Style.partner_card_bottom_right}`}>
             <div className={Style.card_body_bottom}>
-              <h3 className={Style.h_text_2}>Bank Support</h3>
+              <h3 className={Style.h_text_2}>Expert Negotiation</h3>
               <p className={Style.p_text_3}>
-                We work with trusted global banks, ensuring every transaction is
-                swift, secure, and fully verified for financial confidence.
+                Clients benefit from our decades of specialized negotiation,
+                delivering strong results and seamless completion on even the
+                most complex deals.
               </p>
 
               <img

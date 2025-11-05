@@ -56,7 +56,7 @@ const GlobalSupply = () => {
       </div>
 
       <div className="custom-container mt-5">
-        <div className="row   g-2 desktop-hide">
+        <div className="row   g-5 desktop-hide">
           {cardData.map((card, index) => (
             <div className="col-md-6 col-12" key={index}>
               <div className={Style.global_card}>

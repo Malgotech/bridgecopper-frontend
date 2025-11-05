@@ -3,7 +3,7 @@ import Style from "./Footer.module.scss";
 import tick from "../../../assets/images/tick.webp";
 import Button from "../../common/Button/Button";
 import arrowImg from "../../../assets/images/btn-arrow-img.webp";
-import footerLogo from "../../../assets/images/footer-logo.webp";
+import footerLogo from "../../../assets/images/footer-logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -123,21 +123,33 @@ const Footer = () => {
                 Our LeaderShip
               </Link>
             </div>
-
             <div className={Style.social_link_container}>
-              <a href="" target="_blank" className={Style.social_link}>
+              <a
+                href="/"
+                rel="noopener noreferrer"
+                className={Style.social_link}
+                aria-label="Facebook">
                 <FaFacebook />
               </a>
-
-              <a href="" target="_blank" className={Style.social_link}>
+              <a
+                href="/"
+                rel="noopener noreferrer"
+                className={Style.social_link}
+                aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-
-              <a href="" target="_blank" className={Style.social_link}>
+              <a
+                href="/"
+                rel="noopener noreferrer"
+                className={Style.social_link}
+                aria-label="Instagram">
                 <FaInstagram />
               </a>
-
-              <a href="" target="_blank" className={Style.social_link}>
+              <a
+                href="/"
+                rel="noopener noreferrer"
+                className={Style.social_link}
+                aria-label="Twitter">
                 <BsTwitterX />
               </a>
             </div>
