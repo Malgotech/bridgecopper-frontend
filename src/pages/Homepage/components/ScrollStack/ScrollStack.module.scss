@@ -1,20 +1,16 @@
 .scroll_section {
   width: 100%;
   position: relative;
-  height: 100vh;
+  height: 500vh; // Increased height for longer scroll duration
   view-timeline-name: --horizontalScroll;
   view-timeline-axis: block;
-  margin-top: 20px;
 }
 
-/* helper classes if you had different classNames for responsive hiding */
-.tabHide { /* keep whatever rules you had */ }
-.mobileHide { /* keep whatever rules you had */ }
 
 .sticky_container {
   position: sticky;
-  top: 100px;
-  height: 480px;
+  top: 300px;
+  height: 600px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -23,6 +19,11 @@
 
   @media (max-width: 1600px) {
     padding-left: 10%;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 5%;
+    height: 500px;
   }
 }
 
@@ -33,29 +34,10 @@
   gap: 40px;
   transform: translateX(0);
 
-  /* Scroll-driven animation (always defined) */
+  /* Scroll-driven animation */
   animation: horizontalMove linear both;
   animation-timeline: --horizontalScroll;
   animation-range: entry 0% exit 100%;
-
-  /* IMPORTANT: when not active, force transform to origin to prevent the timeline from visually moving cards / letting section scroll away */
-  /* this override prevents the animation from shifting layout when inactive */
-  /* use higher specificity to make sure it overrides the animation transform */
-  transform: translateX(0);
-}
-
-/* When active (hover / pointer inside OR toggled with JS), allow the animation to run and remove the forced transform override */
-.scroll_section.is-active .cards_wrapper {
-  /* Remove the forced static transform so the animation can apply transforms from the timeline */
-  transform: none;
-  /* Ensure animation runs (some browsers may respect running state) */
-  animation-play-state: running;
-}
-
-/* If you want desktop-only hover without JS you can keep this, JS makes it reliable across devices */
-.scroll_section:hover .cards_wrapper {
-  transform: none;
-  animation-play-state: running;
 }
 
 .global_card {
@@ -72,11 +54,13 @@
   @media (max-width: 767px) {
     width: 300px;
     height: 380px;
+    flex: 0 0 300px;
   }
 
   .card_img {
     width: 100%;
     height: auto;
+    display: block;
   }
 
   .card_content {
@@ -93,15 +77,17 @@
     z-index: 10;
 
     .p_text_3 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 500;
       color: var(--text-white);
+      margin: 0;
     }
 
     .p_text_4 {
       font-size: 18px;
       font-weight: 400;
       color: #ffffffcc;
+      margin: 0;
 
       @media (max-width: 767px) {
         font-size: 16px;
@@ -110,23 +96,55 @@
   }
 }
 
-/* Keyframes remain the same */
+// Main animation for desktop
 @keyframes horizontalMove {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(calc(-3.2 * (100% - 100vw + 18%)));
+
+  100% {
+    // Calculate based on total cards width minus viewport width plus padding
+    transform: translateX(calc(-110% + 100vw - 18%));
   }
 }
 
+// Adjustments for different screen sizes
 @media (max-width: 1600px) {
   @keyframes horizontalMove {
-    from {
+    0% {
       transform: translateX(0);
     }
-    to {
-      transform: translateX(calc(-1.2 * (100% - 100vw + 18%)));
+
+    100% {
+      transform: translateX(calc(-110% + 100vw - 10%));
     }
+  }
+}
+
+@media (max-width: 767px) {
+  @keyframes horizontalMove {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-100% + 100vw - 5%));
+    }
+  }
+
+  .cards_wrapper {
+    gap: 20px;
+  }
+}
+
+// Fallback for browsers that don't support view-timeline
+@supports not (animation-timeline: view()) {
+  .scroll_section {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .cards_wrapper {
+    animation: none;
   }
 }

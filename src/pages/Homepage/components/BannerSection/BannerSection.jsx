@@ -4,6 +4,7 @@ import Button from "../../../../components/common/Button/Button";
 import backgrundvdo from "../../../../assets/images/banner-background-vdo.mp4";
 import enami from "../../../../assets/images/enami.svg";
 import square from "../../../../assets/images/Subtract.png";
+import bannerImg from "../../../../assets/images/banner-img.webp";
 
 const BannerSection = () => {
   return (
@@ -16,6 +17,21 @@ const BannerSection = () => {
             loop
             muted
             playsInline
+            cla
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              display: "none",
+            }}
+          />
+
+          <img
+            src={bannerImg}
+            alt="banner "
             style={{
               width: "100%",
               height: "100%",
@@ -25,6 +41,10 @@ const BannerSection = () => {
               left: 0,
             }}
           />
+
+          <div className={Style.vdo_blur} />
+
+
         </div>
 
         <div className={Style.banner_content_top}>
@@ -58,7 +78,6 @@ const BannerSection = () => {
           <p className={Style.p_scroll}>Scroll Down</p>
         </div>
 
-    
         <div className={`${Style.banner_bottom_content} tab-hide mobile-hide`}>
           <div className={Style.banner_bottom_container}>
             <img
@@ -101,7 +120,6 @@ const BannerSection = () => {
             alt="square"
             className={`${Style.square_img}  tab-hide mobile-hide`}
           />
-      
 
           <p className={`${Style.p_text_2} mobile-hide`}>
             Partnered with entities

@@ -3,6 +3,13 @@
     max-height: 100%;
     overflow: hidden;
     background: #fff;
+    position: sticky;
+    top: 100px;
+    left: 0;
+
+    @media (min-width: 300px) and (max-width: 991px)  {
+   position: static;
+    }
 
     .global_section_head {
         width: 100%;
