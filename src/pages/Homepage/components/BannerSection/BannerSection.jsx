@@ -104,7 +104,7 @@ const BannerSection = () => {
             className={`${Style.square_img}  tab-hide mobile-hide`}
           />
 
-          <p className={`${Style.p_text_2} mobile-hide`}>
+          <p className={`${Style.p_text_2} `}>
             Partnered with entities
           </p>
           <div className={Style.bottom_container}>

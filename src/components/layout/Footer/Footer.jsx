@@ -120,7 +120,7 @@ const Footer = () => {
                 to="#leader"
                 onClick={goToLeaderSection}
                 className={Style.foot_link}>
-                Our LeaderShip
+                Our Leadership
               </Link>
             </div>
             <div className={Style.social_link_container}>
