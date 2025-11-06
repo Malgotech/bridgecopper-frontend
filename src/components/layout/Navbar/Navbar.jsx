@@ -130,7 +130,7 @@ const Navbar = ({ setThirdSectionActive }) => {
                   to="#leader"
                   onClick={goToLeaderSection}
                   className={`${Style.nav_link}  `}>
-                  Our LeaderShip
+                  Our Leadership
                 </Link>
               </li>
 
@@ -170,7 +170,7 @@ const Navbar = ({ setThirdSectionActive }) => {
                     to="#leader"
                     onClick={goToLeaderSection}
                     className={`${Style.nav_link}  `}>
-                    Our LeaderShip
+                    Our Leadership
                   </Link>
                 </li>
 

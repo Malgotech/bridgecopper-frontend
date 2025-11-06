@@ -8,6 +8,7 @@
      //  background: #fff;
      -webkit-backdrop-filter: blur(40px);
      backdrop-filter: blur(40px);
+     border-bottom: 1px solid #cecece;
      position: fixed;
      top: 0;
      left: 0;
@@ -53,7 +54,7 @@
              align-items: center;
              gap: 20px;
              padding: 0;
-             margin-top: 12px;
+             margin-top: 13px;
          }
 
          .btn_menu {
