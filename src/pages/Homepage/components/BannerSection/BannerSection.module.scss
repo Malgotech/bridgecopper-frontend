@@ -33,9 +33,8 @@
         z-index: 1;
         // overflow: hidden;
         padding: 100px 70px;
-        background: #00000033;
+      
 
-        // backdrop-filter: blur(20px);
 
 
 
@@ -259,8 +258,8 @@
                 top: 0;
                 left: 0;
                 z-index: 3;
-                background: #00000033;
-                backdrop-filter: blur(2px);
+                  background: #2A2A2A;
+                  opacity: 0.5;
             }
         }
 

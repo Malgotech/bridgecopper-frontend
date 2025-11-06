@@ -142,6 +142,25 @@
                     font-size: 14px;
                     font-weight: 700;
                     color: #53FF9D;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 2px;
+                }
+
+                .p_text_2_red {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: red;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 2px;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(12%) sepia(86%) saturate(7484%) hue-rotate(3deg) brightness(105%) contrast(115%);
+                        transform: rotate(-180deg);
+                    }
                 }
             }
         }

@@ -2,8 +2,23 @@ import React from "react";
 import Style from "./PremiumCopper.module.scss";
 import stone from "../../../../assets/images/stone.webp";
 import Button from "../../../../components/common/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const PremiumCopper = () => {
+  const navigate = useNavigate();
+
+  const goToNetworkSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("network");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <section className="custom-container" id="copper">
       <div className={Style.premium_section}>
@@ -78,7 +93,12 @@ const PremiumCopper = () => {
                 the government’s National Mining Enterprise, ensuring all supply
                 meets strict industry and export standards.
               </p>
-              <Button title="Explore Our Network" />
+
+              <Button
+                to="#network"
+                title="Explore Our Network"
+                onClick={goToNetworkSection}
+              />
             </div>
           </div>
         </div>

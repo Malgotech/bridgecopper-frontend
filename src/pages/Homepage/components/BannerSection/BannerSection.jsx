@@ -5,8 +5,24 @@ import backgrundvdo from "../../../../assets/images/CopperConcentrateVideo.webm"
 import enami from "../../../../assets/images/enami.webp";
 import square from "../../../../assets/images/Subtract.png";
 import bannerImg from "../../../../assets/images/banner-img.webp";
+import { useNavigate } from "react-router-dom";
 
 const BannerSection = () => {
+
+  const navigate = useNavigate()
+
+  const goToNetworkSection = () => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("network");
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <section className={Style.banner_section}>
       <div className={Style.banner_container}>
@@ -43,7 +59,12 @@ const BannerSection = () => {
           </p>
 
           <div className={Style.btn_container}>
-            <Button title="Explore Our Network" className={Style.btn_explore} />
+            <Button
+              to="#network"
+              title="Explore Our Network"
+              className={Style.btn_explore}
+              onClick={goToNetworkSection}
+            />
 
             <button className={Style.btn_connect}>
               <span>Contact Us</span>
@@ -104,9 +125,7 @@ const BannerSection = () => {
             className={`${Style.square_img}  tab-hide mobile-hide`}
           />
 
-          <p className={`${Style.p_text_2} `}>
-            Partnered with entities
-          </p>
+          <p className={`${Style.p_text_2} `}>Partnered with entities</p>
           <div className={Style.bottom_container}>
             <div className={Style.bottom_content}>
               <p className={Style.p_text_3}>$10B</p>

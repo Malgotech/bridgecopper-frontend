@@ -1,7 +1,7 @@
  .scroll_section {
    width: 100%;
    position: relative;
-   height: 300vh;
+  height: 180vh;
    /* shorter = faster scroll */
    view-timeline-name: --horizontalScroll;
    view-timeline-axis: block;
@@ -104,7 +104,7 @@
    }
 
    100% {
-     transform: translateX(calc(-140% + 100vw - 6%));
+     transform: translateX(calc(-140% + 100vw - 10%));
    }
  }
 

@@ -1,7 +1,32 @@
 import React from "react";
 import Style from "./Button.module.scss";
 
-const Button = ({ title, img, className = "", onClick, type = "button" }) => {
+const Button = ({
+  title,
+  img,
+  className = "",
+  onClick,
+  type = "button",
+  to, // <-- add this prop
+  target, // optional for external links
+}) => {
+  if (to) {
+    // Render as link if "to" is provided
+    return (
+      <a
+        href={to}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        className={`${Style.btn_connect} ${className}`}
+      >
+        <span>
+          {title}
+          {img && <img src={img} alt="icon" width={20} height={20} />}
+        </span>
+      </a>
+    );
+  }
+
   return (
     <button
       type={type}

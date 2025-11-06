@@ -16,18 +16,18 @@ const cardData = [
     image: cardImg1,
   },
   {
-    title: "Global Reach",
-    desc: "Working with sustainable mining networks worldwide",
+    title: "Vast Reserves",
+    desc: "More than USD 10 billion in proven copper reserves",
     image: cardImg2,
   },
   {
-    title: "Verified Partners",
-    desc: "All our sources are government verified and audited",
+    title: "Legacy Leadershi",
+    desc: " Operations managed by a family office with over 80 years’ experience",
     image: cardImg3,
   },
   {
-    title: "Eco-Friendly Mining",
-    desc: "Focused on environmentally conscious practices",
+    title: "World Reach",
+    desc: "Proven track record supplying global industrial, manufacturing, and energy.",
     image: cardImg4,
   },
 ];
