@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "./LeaderShip.module.scss";
-import cardImg from "../../../../assets/images/leader-img.webp";
-import clientImg from "../../../../assets/images/client-img.webp";
+import cardImg from "../../../../assets/images/leaderImg.png";
+import clientImg from "../../../../assets/images/Shai.png";
 
 const LeaderShip = () => {
   return (
@@ -18,6 +18,18 @@ const LeaderShip = () => {
           <div className="row g-4">
             <div className="col-xxl-6 col-lg-5 col-md-6 col-12  ">
               <div className={Style.leadership_content_left}>
+
+                  <div className={Style.progressive_blur_container}>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.gradient}></div>
+                </div>
+                
                 <img
                   src={cardImg}
                   alt="founder"
@@ -55,6 +67,17 @@ const LeaderShip = () => {
           <div className="row g-4">
             <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
+                <div className={Style.progressive_blur_container}>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.gradient}></div>
+                </div>
+
                 <img
                   src={clientImg}
                   alt="card"
@@ -71,8 +94,18 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-               <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
+                  <div className={Style.progressive_blur_container}>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.gradient}></div>
+                </div>
                 <img
                   src={clientImg}
                   alt="card"
@@ -89,8 +122,18 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-               <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
+                  <div className={Style.progressive_blur_container}>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.gradient}></div>
+                </div>
                 <img
                   src={clientImg}
                   alt="card"
@@ -107,8 +150,19 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-               <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
+
+                  <div className={Style.progressive_blur_container}>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.blur_filter}></div>
+                  <div className={Style.gradient}></div>
+                </div>
                 <img
                   src={clientImg}
                   alt="card"
