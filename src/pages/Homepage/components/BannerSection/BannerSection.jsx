@@ -8,8 +8,7 @@ import bannerImg from "../../../../assets/images/banner-img.webp";
 import { useNavigate } from "react-router-dom";
 
 const BannerSection = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const goToNetworkSection = () => {
     navigate("/");
@@ -59,12 +58,19 @@ const BannerSection = () => {
           </p>
 
           <div className={Style.btn_container}>
-            <Button
+            {/* <Button
               to="#network"
               title="Explore Our Network"
               className={Style.btn_explore}
               onClick={goToNetworkSection}
-            />
+            /> */}
+
+            <button
+              to="#network"
+              className={Style.btn_explore}
+              onClick={goToNetworkSection}>
+              <span>Explore Our Network</span>
+            </button>
 
             <button className={Style.btn_connect}>
               <span>Contact Us</span>

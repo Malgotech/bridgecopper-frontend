@@ -33,7 +33,7 @@
         z-index: 1;
         // overflow: hidden;
         padding: 100px 70px;
-      
+
 
 
 
@@ -200,6 +200,34 @@
 
 
         .btn_explore {
+
+            width: fit-content;
+            max-height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 50%);
+            border: none;
+            border-radius: 100px;
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                width: 100%;
+                height: 47px;
+                background: #B8733380;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 100%;
+                color: var(--text-white);
+                padding: 0px 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                border-radius: 100px;
+
+            }
+
             @media (max-width: 767px) {
                 width: 100%;
             }
@@ -207,7 +235,7 @@
 
 
         .btn_connect {
-            width: fit-content;
+            width: 199px;
             max-height: 100%;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 50%);
             border: none;
@@ -258,8 +286,8 @@
                 top: 0;
                 left: 0;
                 z-index: 3;
-                  background: #2A2A2A;
-                  opacity: 0.5;
+                background: #2A2A2A;
+                opacity: 0.5;
             }
         }
 
