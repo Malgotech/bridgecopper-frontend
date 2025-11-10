@@ -7,8 +7,6 @@ import axios from "axios";
 const LondonMetal = () => {
   const [price, setprice] = useState("");
   const [percent, setPercent] = useState("");
-  console.log("price :>> ", price);
-  console.log("percent :>> ", percent);
   const boundingRef = useRef(null);
   const handleEnter = (e) => {
     boundingRef.current = e.currentTarget.getBoundingClientRect();
@@ -66,6 +64,7 @@ const LondonMetal = () => {
           </h2>
 
           <div className={Style.bridge_content}>
+            
             {/* <img
               src={bridgeImg}
               alt="bridge"
