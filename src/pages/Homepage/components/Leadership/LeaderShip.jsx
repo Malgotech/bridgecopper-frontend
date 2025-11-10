@@ -93,7 +93,7 @@ const LeaderShip = () => {
 
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
-                    <p className={Style.name}>Shai Dzindzihashvili</p>
+                    <p className={Style.name}>Shai Dzindzihashvilii</p>
                     <p className={Style.role}>Designation</p>
                   </div>
                 </div>
