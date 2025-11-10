@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Style from "./LondonMetal.module.scss";
-import bridgeImg from "../../../../assets/images/bridge-img.svg";
+import bridgeImg from "../../../../assets/images/bridge-img.png";
 import upIcon from "../../../../assets/images/up-icon.svg";
 import axios from "axios";
 
@@ -99,7 +99,7 @@ const LondonMetal = () => {
               {percent < 0 ? (
                 <p className={Style.p_text_2_red}>
                   <img src={upIcon} alt="bullish" width={15} height={14} />
-                  -{percent}
+                  {percent}
                 </p>
               ) : (
                 <p className={Style.p_text_2}>

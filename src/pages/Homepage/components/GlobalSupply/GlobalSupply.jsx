@@ -4,10 +4,11 @@ import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import Style from "./GlobalSupply.module.scss";
-import cardImg1 from "../../../../assets/images/global-card-1.webp";
-import cardImg2 from "../../../../assets/images/global-card-2.webp";
-import cardImg3 from "../../../../assets/images/global-card-3.webp";
-import cardImg4 from "../../../../assets/images/global-card-4.webp";
+import cardImg1 from "../../../../assets/images/global-card-1.png";
+import cardImg2 from "../../../../assets/images/global-card-2.png";
+import cardImg3 from "../../../../assets/images/global-card-3.png";
+import cardImg4 from "../../../../assets/images/global-card-4.png";
+
 
 const cardData = [
   {
@@ -60,6 +61,7 @@ const GlobalSupply = () => {
           {cardData.map((card, index) => (
             <div className="col-md-6 col-12" key={index}>
               <div className={Style.global_card}>
+                   <div className={Style.blur} />
                 <img
                   src={card.image}
                   alt={card.title}

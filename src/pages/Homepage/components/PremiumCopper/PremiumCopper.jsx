@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./PremiumCopper.module.scss";
-import stone from "../../../../assets/images/stone.webp";
+import stone from "../../../../assets/images/stone.png";
 import Button from "../../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 

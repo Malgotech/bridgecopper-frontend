@@ -1,9 +1,9 @@
 import React from "react";
 import Style from "./ScrollStack.module.scss";
-import cardImg1 from "../../../../assets/images/global-card-1.webp";
-import cardImg2 from "../../../../assets/images/global-card-2.webp";
-import cardImg3 from "../../../../assets/images/global-card-3.webp";
-import cardImg4 from "../../../../assets/images/global-card-4.webp";
+import cardImg1 from "../../../../assets/images/global-card-1.png";
+import cardImg2 from "../../../../assets/images/global-card-2.png";
+import cardImg3 from "../../../../assets/images/global-card-3.png";
+import cardImg4 from "../../../../assets/images/global-card-4.png";
 
 const ScrollStack = () => {
   return (
@@ -11,6 +11,7 @@ const ScrollStack = () => {
       <div className={Style.sticky_container}>
         <div className={Style.cards_wrapper}>
           <div className={Style.global_card}>
+            <div className={Style.blur} />
             <img src={cardImg1} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>ENAMI Approved</p>
@@ -20,6 +21,8 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
+            <div className={Style.blur} />
+
             <img src={cardImg2} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>Vast Reserves</p>
@@ -29,6 +32,7 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
+            <div className={Style.blur} />
             <img src={cardImg3} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>Legacy Leadership</p>
@@ -39,6 +43,7 @@ const ScrollStack = () => {
             </div>
           </div>
           <div className={Style.global_card}>
+            <div className={Style.blur} />{" "}
             <img src={cardImg4} alt="global-card" className={Style.card_img} />
             <div className={Style.card_content}>
               <p className={Style.p_text_3}>World Reach</p>
