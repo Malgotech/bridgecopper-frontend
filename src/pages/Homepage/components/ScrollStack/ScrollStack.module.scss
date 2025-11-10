@@ -78,11 +78,11 @@
      left: 0;
      bottom: 0;
      z-index: 2;
-       background-color: red;
-    //  backdrop-filter: blur(8px);
-    //  -webkit-backdrop-filter: blur(8px);
-    //  mask-image: linear-gradient(to top, black 70%, transparent 100%);
-    //  pointer-events: none;
+       background-color: transparent;
+     backdrop-filter: blur(8px);
+     -webkit-backdrop-filter: blur(8px);
+     mask-image: linear-gradient(to top, black 70%, transparent 100%);
+     pointer-events: none;
      border-bottom-left-radius: 24px;
      border-bottom-right-radius: 24px;
 
