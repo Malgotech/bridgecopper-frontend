@@ -82,6 +82,7 @@
         border-radius: 24px;
         overflow: hidden;
         position: relative;
+        isolation: isolate;
         z-index: 1;
 
 
