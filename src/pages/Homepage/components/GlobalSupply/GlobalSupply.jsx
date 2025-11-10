@@ -61,7 +61,7 @@ const GlobalSupply = () => {
           {cardData.map((card, index) => (
             <div className="col-md-6 col-12" key={index}>
               <div className={Style.global_card}>
-                   <div className={Style.blur} />
+                   <div className={Style.blur_bottom} />
                 <img
                   src={card.image}
                   alt={card.title}
