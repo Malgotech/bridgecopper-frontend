@@ -103,7 +103,7 @@
 
 
         @media (max-width: 767px) {
-            height: 380px;
+            height: 420px;
         }
 
 
@@ -130,7 +130,10 @@
 
         .card_img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
 
         .card_content {
