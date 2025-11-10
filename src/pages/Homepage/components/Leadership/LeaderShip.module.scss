@@ -288,9 +288,9 @@
             height: 350px;
             border-radius: 24px;
             position: relative;
-              isolation: isolate;
+            isolation: isolate;
+            overflow: visible;
             background: none;
-            overflow: hidden;
             z-index: 1;
 
             @media (min-width: 768px) and (max-width: 991px) {
@@ -330,21 +330,32 @@
             }
 
             .blur_card {
-                width: 100%;
-                height: 40%;
                 position: absolute;
                 left: 0;
                 bottom: 0;
+                width: 100%;
+                height: 40%;
                 z-index: 3;
-                background: rgba(255, 255, 255, 0.05);
+
+                /* Semi-transparent color ensures something to blend with */
+                background: rgba(255, 255, 255, 0.08);
+
+                /* Backdrop blur */
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
+
+                /* Gradient fade */
                 mask-image: linear-gradient(to top, black 70%, transparent 100%);
                 -webkit-mask-image: linear-gradient(to top, black 70%, transparent 100%);
+
                 pointer-events: none;
                 border-bottom-left-radius: 24px;
                 border-bottom-right-radius: 24px;
-                isolation: isolate;
+
+                /* CRITICAL FIX for Vercel builds */
+                transform: translateZ(0);
+                /* forces GPU layer */
+                will-change: backdrop-filter;
 
                 @media (max-width: 767px) {
                     height: 35%;
