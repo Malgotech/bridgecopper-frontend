@@ -1,16 +1,17 @@
 .banner_section {
     width: 100%;
     height: calc(100dvh - 80px);
-    padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 20px;
 
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1600px) {
         width: 1204px;
         height: 100%;
+        padding: 0;
     }
 
 

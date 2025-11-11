@@ -18,7 +18,7 @@ const LeaderShip = () => {
           <div className="row g-4">
             <div className="col-xxl-6 col-lg-5 col-md-6 col-12  ">
               <div className={Style.leadership_content_left}>
-                <div className={Style.blur} />
+         <div className={Style.progressive_blur}></div>
 
                 <img
                   src={cardImg}
