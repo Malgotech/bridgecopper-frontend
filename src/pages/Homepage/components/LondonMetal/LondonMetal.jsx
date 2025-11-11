@@ -21,8 +21,8 @@ const LondonMetal = () => {
     const xPercent = x / rect.width;
     const yPercent = y / rect.height;
 
-    const rotateX = (yPercent - 0.5) * -20;
-    const rotateY = (xPercent - 0.5) * 20;
+    const rotateX = (yPercent - 0.5) * -30;
+    const rotateY = (xPercent - 0.5) * 30;
 
     e.currentTarget.style.setProperty("--rotateX", `${rotateX}deg`);
     e.currentTarget.style.setProperty("--rotateY", `${rotateY}deg`);
