@@ -650,7 +650,7 @@ const ContactForm = ({ show, handleClose }) => {
   const dropdownRef = useRef(null);
 
 const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCodeState, setSelectedCodeState] = useState("");
+  const [selectedCodeState, setSelectedCodeState] = useState("+91");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
