@@ -214,7 +214,7 @@
                          color: #6C6C6C;
 
                          .phone_dropdown {
-                             width: 50px;
+                             width: 80px;
                              max-height: 100%;
                              position: relative;
                              display: inline-block;
@@ -224,13 +224,14 @@
                                  height: 42px;
                                  background: none;
                                  display: flex;
-                                 justify-content: space-between;
+                                 justify-content: center;
                                  align-items: center;
                                  gap: 4px;
                                  font-size: 14px;
                                  font-weight: 400;
                                  color: #6C6C6C;
                                  border: none;
+                                text-wrap: nowrap;
 
                                  .arrow {
                                      font-size: 14px;
