@@ -788,6 +788,7 @@ const filteredCountries = useMemo(() => {
                 <div className={Style.phone_dropdown} ref={menuRef}>
                   <button
                     className={Style.btn_drop_phone}
+                    type="button"
                     onClick={() => setMenuOpen((prev) => !prev)}>
                     {selectedCodeState}{" "}
                     <IoIosArrowDown
