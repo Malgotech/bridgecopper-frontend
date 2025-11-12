@@ -18,7 +18,7 @@ const LeaderShip = () => {
           <div className="row g-4">
             <div className="col-xxl-6 col-lg-5 col-md-6 col-12  ">
               <div className={Style.leadership_content_left}>
-         <div className={Style.progressive_blur}></div>
+                <div className={Style.progressive_blur}></div>
 
                 <img
                   src={cardImg}
@@ -59,7 +59,7 @@ const LeaderShip = () => {
               <div className={Style.leadership_card}>
                 <div className={Style.background_color} />
 
-                  <div className={Style.blur_card} />
+                <div className={Style.blur_card} />
 
                 <img
                   src={clientImg}
@@ -77,11 +77,11 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-              <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <div className={Style.background_color} />
 
-                  <div className={Style.blur_card} />
+                <div className={Style.blur_card} />
 
                 <img
                   src={clientImg}
@@ -99,11 +99,11 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-              <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <div className={Style.background_color} />
 
-                  <div className={Style.blur_card} />
+                <div className={Style.blur_card} />
 
                 <img
                   src={clientImg}
@@ -121,11 +121,11 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-              <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12">
               <div className={Style.leadership_card}>
                 <div className={Style.background_color} />
 
-                  <div className={Style.blur_card} />
+                <div className={Style.blur_card} />
 
                 <img
                   src={clientImg}
@@ -143,7 +143,6 @@ const LeaderShip = () => {
                 </div>
               </div>
             </div>
-           
           </div>
         </div>
       </div>
