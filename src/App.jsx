@@ -11,26 +11,39 @@ import ContactForm from "./components/ui/ContactForm/ContactForm";
 
 function App() {
   const [thirdSectionActive, setThirdSectionActive] = useState(false);
-  const [contactModal,setContactModal]= useState(false);
+  const [contactModal, setContactModal] = useState(false);
 
-  const handleContactModal=()=>{
-    setContactModal(true)
-  }
+  const handleContactModal = () => {
+    setContactModal(true);
+  };
 
   return (
-    <div className="app">
-      <Navbar setThirdSectionActive={setThirdSectionActive} handleContactModal={handleContactModal}/>
-      <main className="routes-div">
-        <Routes>
-          <Route
-            path="/"
-            element={<Homepage isActive={thirdSectionActive} handleContactModal={handleContactModal}/>}
-          />
-        </Routes>
-      </main>
-      <Footer handleContactModal={handleContactModal}/>
-      <ContactForm show={contactModal} handleClose={()=>setContactModal(false)} />
-    </div>
+    <>
+      <div className="app">
+        <Navbar
+          setThirdSectionActive={setThirdSectionActive}
+          handleContactModal={handleContactModal}
+        />
+        <main className="routes-div">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Homepage
+                  isActive={thirdSectionActive}
+                  handleContactModal={handleContactModal}
+                />
+              }
+            />
+          </Routes>
+        </main>
+        <Footer handleContactModal={handleContactModal} />
+      </div>
+      <ContactForm
+        show={contactModal}
+        handleClose={() => setContactModal(false)}
+      />
+    </>
   );
 }
 
