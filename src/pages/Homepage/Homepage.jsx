@@ -8,8 +8,9 @@ import LondonMetal from "./components/LondonMetal/LondonMetal";
 import PremiumCopper from "./components/PremiumCopper/PremiumCopper";
 import BannerSection from "./components/BannerSection/BannerSection";
 import ScrollStack from "./components/ScrollStack/ScrollStack";
+import ContactForm from "../../components/ui/ContactForm/ContactForm";
 
-const Homepage = ({ isActive,handleContactModal }) => {
+const Homepage = ({ isActive,handleContactModal,contactModal,setContactModal }) => {
   return (
     <div className={Style.homepage}>
       <BannerSection handleContactModal={handleContactModal}/>
@@ -24,6 +25,11 @@ const Homepage = ({ isActive,handleContactModal }) => {
 
       <PartnerShip />
       <LeaderShip />
+
+            <ContactForm
+        show={contactModal}
+        handleClose={() => setContactModal(false)}
+      />
     </div>
   );
 };

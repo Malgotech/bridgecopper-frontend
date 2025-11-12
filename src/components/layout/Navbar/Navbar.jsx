@@ -5,8 +5,9 @@ import Button from "../../common/Button/Button";
 import logo from "../../../assets/images/header-logo.svg";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
+import ContactForm from "../../ui/ContactForm/ContactForm";
 
-const Navbar = ({ setThirdSectionActive, handleContactModal }) => {
+const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handleContactModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [bgChange, setBgChange] = useState(false);
@@ -182,6 +183,11 @@ const Navbar = ({ setThirdSectionActive, handleContactModal }) => {
           )}
         </div>
       </div>
+
+                  <ContactForm
+        show={contactModal}
+        handleClose={() => setContactModal(false)}
+      />
     </header>
   );
 };

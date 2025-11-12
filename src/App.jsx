@@ -21,6 +21,8 @@ function App() {
     <>
       <div className="app">
         <Navbar
+           contactModal={contactModal}
+        setContactModal={setContactModal}
           setThirdSectionActive={setThirdSectionActive}
           handleContactModal={handleContactModal}
         />
@@ -30,19 +32,18 @@ function App() {
               path="/"
               element={
                 <Homepage
+                contactModal={contactModal}
                   isActive={thirdSectionActive}
                   handleContactModal={handleContactModal}
+                  setContactModal={setContactModal}
                 />
               }
             />
           </Routes>
         </main>
-        <Footer handleContactModal={handleContactModal} />
+        <Footer  setContactModal={setContactModal}  contactModal={contactModal}  handleContactModal={handleContactModal} />
       </div>
-      <ContactForm
-        show={contactModal}
-        handleClose={() => setContactModal(false)}
-      />
+
     </>
   );
 }

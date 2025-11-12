@@ -9,8 +9,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import ContactForm from "../../ui/ContactForm/ContactForm";
 
-const Footer = ({handleContactModal}) => {
+const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
   const navigate = useNavigate();
 
   const goToThirdSection = () => {
@@ -89,7 +90,11 @@ const Footer = ({handleContactModal}) => {
                 continents.
               </p>
 
-              <Button title="Let's Connect" img={arrowImg} onClick={handleContactModal}/>
+              <Button
+                title="Let's Connect"
+                img={arrowImg}
+                onClick={handleContactModal}
+              />
             </div>
           </div>
           <div className={Style.footer_body}>
@@ -172,6 +177,11 @@ const Footer = ({handleContactModal}) => {
           </div>
         </div>
       </div>
+
+      <ContactForm
+        show={contactModal}
+        handleClose={() => setContactModal(false)}
+      />
     </footer>
   );
 };
