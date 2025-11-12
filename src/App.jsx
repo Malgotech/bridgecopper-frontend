@@ -11,7 +11,7 @@ import ContactForm from "./components/ui/ContactForm/ContactForm";
 
 function App() {
   const [thirdSectionActive, setThirdSectionActive] = useState(false);
-  const [contactModal, setContactModal] = useState(false);
+  const [contactModal, setContactModal] = useState(true);
 
   const handleContactModal = () => {
     setContactModal(true);
