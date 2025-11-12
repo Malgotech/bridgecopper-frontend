@@ -10,7 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
-const Footer = () => {
+const Footer = ({handleContactModal}) => {
   const navigate = useNavigate();
 
   const goToThirdSection = () => {
@@ -89,7 +89,7 @@ const Footer = () => {
                 continents.
               </p>
 
-              <Button title="Let's Connect" img={arrowImg} />
+              <Button title="Let's Connect" img={arrowImg} onClick={handleContactModal}/>
             </div>
           </div>
           <div className={Style.footer_body}>

@@ -9,10 +9,10 @@ import PremiumCopper from "./components/PremiumCopper/PremiumCopper";
 import BannerSection from "./components/BannerSection/BannerSection";
 import ScrollStack from "./components/ScrollStack/ScrollStack";
 
-const Homepage = ({ isActive }) => {
+const Homepage = ({ isActive,handleContactModal }) => {
   return (
     <div className={Style.homepage}>
-      <BannerSection />
+      <BannerSection handleContactModal={handleContactModal}/>
       <PremiumCopper />
       <LondonMetal />
       <WhatWeDo isActive={isActive} />

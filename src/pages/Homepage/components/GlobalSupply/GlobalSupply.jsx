@@ -4,10 +4,10 @@ import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import Style from "./GlobalSupply.module.scss";
-import cardImg1 from "../../../../assets/images/global-card-1.png";
-import cardImg2 from "../../../../assets/images/global-card-2.png";
-import cardImg3 from "../../../../assets/images/global-card-3.png";
-import cardImg4 from "../../../../assets/images/global-card-4.png";
+import cardImg1 from "../../../../assets/images/global-new-1.png";
+import cardImg2 from "../../../../assets/images/global-new-2.png";
+import cardImg3 from "../../../../assets/images/global-new-3.png";
+import cardImg4 from "../../../../assets/images/global-new-4.png";
 
 
 const cardData = [

@@ -7,7 +7,7 @@ import square from "../../../../assets/images/Subtract.png";
 import bannerImg from "../../../../assets/images/banner-img.webp";
 import { useNavigate } from "react-router-dom";
 
-const BannerSection = () => {
+const BannerSection = ({handleContactModal}) => {
   const navigate = useNavigate();
 
   const goToNetworkSection = () => {
@@ -72,7 +72,7 @@ const BannerSection = () => {
               <span>Explore Our Network</span>
             </button>
 
-            <button className={Style.btn_connect}>
+            <button className={Style.btn_connect} onClick={handleContactModal}>
               <span>Contact Us</span>
             </button>
           </div>

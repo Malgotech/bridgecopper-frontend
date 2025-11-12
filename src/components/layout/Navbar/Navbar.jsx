@@ -6,7 +6,7 @@ import logo from "../../../assets/images/header-logo.svg";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = ({ setThirdSectionActive }) => {
+const Navbar = ({ setThirdSectionActive, handleContactModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [bgChange, setBgChange] = useState(false);
@@ -135,7 +135,7 @@ const Navbar = ({ setThirdSectionActive }) => {
               </li>
 
               <li>
-                <Button title="Let's Connect" />
+                <Button title="Let's Connect" onClick={handleContactModal} />
               </li>
             </ul>
 
@@ -146,7 +146,7 @@ const Navbar = ({ setThirdSectionActive }) => {
             </button>
           </nav>
           {isOpen && (
-            <div className={Style.mobile_nav}  onClick={handleNav}>
+            <div className={Style.mobile_nav} onClick={handleNav}>
               <ul>
                 <li>
                   <Link
@@ -175,7 +175,7 @@ const Navbar = ({ setThirdSectionActive }) => {
                 </li>
 
                 <li>
-                  <Button title="Let's Connect" />
+                  <Button title="Let's Connect" onClick={handleContactModal} />
                 </li>
               </ul>
             </div>

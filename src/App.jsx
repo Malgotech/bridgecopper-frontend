@@ -7,22 +7,29 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./components/layout/Footer/Footer";
+import ContactForm from "./components/ui/ContactForm/ContactForm";
 
 function App() {
   const [thirdSectionActive, setThirdSectionActive] = useState(false);
+  const [contactModal,setContactModal]= useState(false);
+
+  const handleContactModal=()=>{
+    setContactModal(true)
+  }
 
   return (
     <div className="app">
-      <Navbar setThirdSectionActive={setThirdSectionActive} />
+      <Navbar setThirdSectionActive={setThirdSectionActive} handleContactModal={handleContactModal}/>
       <main className="routes-div">
         <Routes>
           <Route
             path="/"
-            element={<Homepage isActive={thirdSectionActive} />}
+            element={<Homepage isActive={thirdSectionActive} handleContactModal={handleContactModal}/>}
           />
         </Routes>
       </main>
-      <Footer />
+      <Footer handleContactModal={handleContactModal}/>
+      <ContactForm show={contactModal} handleClose={()=>setContactModal(false)} />
     </div>
   );
 }
