@@ -649,7 +649,8 @@ const ContactForm = ({ show, handleClose }) => {
   const [selected, setSelected] = useState("Select Country");
   const dropdownRef = useRef(null);
 
-const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [countrySearchTerm, setCountrySearchTerm] = useState("");
   const [selectedCodeState, setSelectedCodeState] = useState("+91");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -681,31 +682,19 @@ const [searchTerm, setSearchTerm] = useState("");
     setIsOpen(false);
   };
 
- 
-
-const filteredCountries = useMemo(() => {
-  const term = searchTerm.trim().toLowerCase();
-  if (!term) return countryPhoneCodes;
-
-  return countryPhoneCodes.filter((item) => {
-    const searchableText = `${item.name} ${item.code}`.toLowerCase();
-    
-    // Simple fuzzy search - matches characters in order but not necessarily consecutive
-    let termIndex = 0;
-    for (let i = 0; i < searchableText.length && termIndex < term.length; i++) {
-      if (searchableText[i] === term[termIndex]) {
-        termIndex++;
-      }
-    }
-    return termIndex === term.length;
-  });
-}, [searchTerm]);
+const filteredCountries = countryPhoneCodes.filter((country) =>
+  country.name.toLowerCase().includes(countrySearchTerm.toLowerCase().trim())
+);
 
   const handlePhoneChange = (e) => {
     const maxLength = countryPhoneLengths[selectedCodeState] || 10;
-    const value = e.target.value.replace(/\D/g, ""); 
+    const value = e.target.value.replace(/\D/g, "");
     setPhoneNumber(value.slice(0, maxLength));
   };
+
+  const filteredCountrieslist = countries.filter((country) =>
+    country.toLowerCase().includes(countrySearchTerm.toLowerCase().trim())
+  );
 
   return (
     <Modal
@@ -724,7 +713,7 @@ const filteredCountries = useMemo(() => {
           alt="contact"
           width={334}
           height={546}
-          className="tab-hide mobile-hide"
+          className={`  ${Style.contact_img} tab-hide mobile-hide`}
         />
 
         <div className={Style.contact_body_right}>
@@ -864,16 +853,30 @@ const filteredCountries = useMemo(() => {
                 </button>
 
                 {isOpen && (
-                  <ul className={Style.dropdown_menu}>
-                    {countries.map((country) => (
-                      <li
-                        key={country}
-                        className={Style.dropdown_item}
-                        onClick={() => handleSelect(country)}>
-                        {country}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className={Style.dropdown_menu}>
+                    <div className={Style.dropdown_menu_container}>
+                      <input
+                        type="text"
+                        className={Style.country_form_control}
+                        placeholder="Search Country"
+                        value={countrySearchTerm}
+                        onChange={(e) => setCountrySearchTerm(e.target.value)}
+                      />
+
+                      {filteredCountrieslist.length > 0 ? (
+                        filteredCountrieslist.map((country) => (
+                          <div
+                            key={country}
+                            className={Style.dropdown_item}
+                            onClick={() => handleSelect(country)}>
+                            {country}
+                          </div>
+                        ))
+                      ) : (
+                        <div   className={Style.dropdown_item}>No results found</div>
+                      )}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
