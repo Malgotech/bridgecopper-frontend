@@ -20,9 +20,9 @@
      overflow-x: hidden;
 
 
-    //  @media (min-width: 992px) {
-    //      --bs-modal-width: 892px !important;
-    //  }
+     //  @media (min-width: 992px) {
+     //      --bs-modal-width: 892px !important;
+     //  }
 
 
 
@@ -223,7 +223,8 @@
                          border: 1px solid #DED6CE;
                          border-radius: 12px;
                          padding: 0px 10px;
-                               @media (max-width: 380px) {
+
+                         @media (max-width: 380px) {
                              height: 38px;
                          }
 
@@ -247,7 +248,8 @@
                          font-size: 14px;
                          font-weight: 400;
                          color: #6C6C6C;
-                               @media (max-width: 380px) {
+
+                         @media (max-width: 380px) {
                              height: 38px;
                          }
 
@@ -270,6 +272,9 @@
                                  color: #6C6C6C;
                                  border: none;
                                  text-wrap: nowrap;
+                                            @media (max-width: 380px) {
+                             height: 38px;
+                         }
 
                                  .arrow {
                                      font-size: 14px;
@@ -365,9 +370,10 @@
                              font-size: 14px;
                              font-weight: 400;
                              color: #6C6C6C;
-                                   @media (max-width: 380px) {
-                             height: 38px;
-                         }
+
+                             @media (max-width: 380px) {
+                                 height: 38px;
+                             }
 
                              .arrow {
                                  font-size: 14px;
@@ -453,9 +459,10 @@
                      justify-content: center;
                      align-items: center;
                      padding: 1px;
-                           @media (max-width: 380px) {
-                             height: 38px;
-                         }
+
+                     @media (max-width: 380px) {
+                         height: 38px;
+                     }
 
                      span {
                          width: 100%;
