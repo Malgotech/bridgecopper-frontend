@@ -118,92 +118,24 @@ const Navbar = ({
   };
 
   return (
-    <header
-      id="navbar"
-      className={`${Style.header} ${scrolled ? Style.shadow : ""}`}>
-      <div className="custom-container">
-        <div className={Style.nav_container}>
-          <a href="/" className={Style.header_link}>
-            <img
-              src={logo}
-              alt="bridge copper logo"
-              width={64}
-              height={64}
-              className={Style.header_logo}
-            />
-          </a>
+    <>
+      <header
+        id="navbar"
+        className={`${Style.header} ${scrolled ? Style.shadow : ""}`}>
+        <div className="custom-container">
+          <div className={Style.nav_container}>
+            <a href="/" className={Style.header_link}>
+              <img
+                src={logo}
+                alt="bridge copper logo"
+                width={64}
+                height={64}
+                className={Style.header_logo}
+              />
+            </a>
 
-          <nav className={`${Style.header_nav}`}>
-            <ul className="mobile-hide ">
-              <li>
-                <Link
-                  to="#copper"
-                  onClick={goToThirdSection}
-                  className={`${Style.nav_link} `}>
-                  {t("Our Copper")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#network"
-                  onClick={goToNetworkSection}
-                  className={`${Style.nav_link}  `}>
-                  {t("Our Network")}
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="#leader"
-                  onClick={goToLeaderSection}
-                  className={`${Style.nav_link}  `}>
-                  {t("Our Leadership")}
-                </Link>
-              </li>
-
-              <li>
-                <Button
-                  title={t("Let's Connect")}
-                  onClick={handleContactModal}
-                />
-              </li>
-            </ul>
-
-            <div className={Style.language_dropdown}>
-              <button
-                className={Style.dropdown_toggle}
-                onClick={toggleDropdown}>
-                🌍 {currentLanguage.label}
-                <IoIosArrowDown
-                  style={{
-                    transform: isOpenLang ? "rotate(180deg)" : "rotate(0deg)",
-                    transition: "0.3s",
-                  }}
-                />
-              </button>
-
-              {isOpenLang && (
-                <ul className={Style.dropdown_menu}>
-                  {languages.map((lang) => (
-                    <li
-                      key={lang.code}
-                      onClick={() => selectLanguage(lang.code)}>
-                      {lang.label}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-
-            <button
-              className={`${Style.btn_menu} desktop-hide tab-hide`}
-              onClick={handleNav}>
-              {isOpen ? <IoClose /> : <LuMenu />}
-            </button>
-          </nav>
-          {isOpen && (
-            <div className={Style.mobile_nav} onClick={handleNav}>
-              <ul>
+            <nav className={`${Style.header_nav}`}>
+              <ul className="mobile-hide ">
                 <li>
                   <Link
                     to="#copper"
@@ -237,16 +169,86 @@ const Navbar = ({
                   />
                 </li>
               </ul>
-            </div>
-          )}
+
+              <div className={Style.language_dropdown}>
+                <button
+                  className={Style.dropdown_toggle}
+                  onClick={toggleDropdown}>
+                  🌍 {currentLanguage.label}
+                  <IoIosArrowDown
+                    style={{
+                      transform: isOpenLang ? "rotate(180deg)" : "rotate(0deg)",
+                      transition: "0.3s",
+                    }}
+                  />
+                </button>
+
+                {isOpenLang && (
+                  <ul className={Style.dropdown_menu}>
+                    {languages.map((lang) => (
+                      <li
+                        key={lang.code}
+                        onClick={() => selectLanguage(lang.code)}>
+                        {lang.label}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <button
+                className={`${Style.btn_menu} desktop-hide tab-hide`}
+                onClick={handleNav}>
+                {isOpen ? <IoClose /> : <LuMenu />}
+              </button>
+            </nav>
+            {isOpen && (
+              <div className={Style.mobile_nav} onClick={handleNav}>
+                <ul>
+                  <li>
+                    <Link
+                      to="#copper"
+                      onClick={goToThirdSection}
+                      className={`${Style.nav_link} `}>
+                      {t("Our Copper")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#network"
+                      onClick={goToNetworkSection}
+                      className={`${Style.nav_link}  `}>
+                      {t("Our Network")}
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      to="#leader"
+                      onClick={goToLeaderSection}
+                      className={`${Style.nav_link}  `}>
+                      {t("Our Leadership")}
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Button
+                      title={t("Let's Connect")}
+                      onClick={handleContactModal}
+                    />
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </header>
 
       <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
       />
-    </header>
+    </>
   );
 };
 

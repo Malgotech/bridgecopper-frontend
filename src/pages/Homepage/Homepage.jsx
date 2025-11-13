@@ -17,28 +17,29 @@ const Homepage = ({
   setContactModal,
 }) => {
   return (
-    <div className={Style.homepage}>
-      <BannerSection handleContactModal={handleContactModal} />
-      <PremiumCopper />
-      <LondonMetal />
-      <WhatWeDo isActive={isActive} />
+    <>
+      <div className={Style.homepage}>
+        <BannerSection handleContactModal={handleContactModal} />
+        <PremiumCopper />
+        <LondonMetal />
+        <WhatWeDo isActive={isActive} />
 
-      <div className={Style.supply_container} id="network">
-        <GlobalSupply />
+        <div className={Style.supply_container} id="network">
+          <GlobalSupply />
 
-        <div className="tab-hide mobile-hide">
-          <ScrollStack />
+          <div className="tab-hide mobile-hide">
+            <ScrollStack />
+          </div>
         </div>
+
+        <PartnerShip />
+        <LeaderShip />
       </div>
-
-      <PartnerShip />
-      <LeaderShip />
-
       <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
       />
-    </div>
+    </>
   );
 };
 
