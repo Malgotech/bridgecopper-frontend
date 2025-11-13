@@ -44,6 +44,11 @@
             position: relative;
             z-index: 1;
 
+            @media (max-width: 420px) {
+                width: 250px !important;
+
+            }
+
 
             &:hover {
                 .bridge_img {
@@ -91,8 +96,8 @@
 
 
                 @media (max-width: 767px) {
-                    width: 350px;
-                    height: 370px;
+                    width: 200px;
+                    height: 320px;
                 }
 
                 &:hover {
@@ -108,6 +113,11 @@
                 pointer-events: none;
                 user-select: none;
                 transition: transform 0.2s ease-out;
+
+                @media (max-width: 767px) {
+                    width: 200px;
+                    height: 320px;
+                }
             }
 
 
@@ -127,6 +137,11 @@
                 align-items: center;
                 justify-content: center;
                 gap: 4px;
+
+                @media (max-width: 767px) {
+                    width: 200px;
+                    height: 80px;
+                }
 
                 .p_text_1 {
                     font-size: 24px;
@@ -195,9 +210,9 @@
             position: relative;
             z-index: 2;
 
-            @media (max-width: 767px) {
-                width: 200px;
-                height: 200px;
+            @media (max-width: 420px) {
+                width: 220px;
+                height: 220px
             }
         }
 
@@ -216,6 +231,11 @@
             @media (max-width: 767px) {
                 width: 180px;
                 height: 180px;
+            }
+
+            @media (max-width: 767px) {
+                width: 120px;
+                height: 120px;
             }
         }
 
