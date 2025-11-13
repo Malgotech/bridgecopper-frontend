@@ -7,6 +7,8 @@
    align-items: center;
    position: relative;
    z-index: 1;
+
+
  }
 
  .routes-div {
@@ -14,47 +16,7 @@
    height: 100%;
    padding-top: 80px;
  }
- .flag-dropdown  {
-  width: 50px;
-  height: 100%;
- }
-
-
  
-
- .selected-flag {
-  border: none;
-  background: none;
- }
-
- .flag-dropdown  {
-  border: none !important;
-  background: none !important;
- }
-
-
- .react-tel-input {
-  width: 100%;  
-   border-radius: 12px;
-
- }
-
- .react-tel-input .flag-dropdown .selected-flag {
-  border: none !important;
-  background: none !important;
-   width: auto !important;
-   padding-left: 8px;
-   /* adjust spacing for the +code */
- }
-
- .react-tel-input .flag-dropdown .arrow {
-   display: none;
-   /* optional: remove arrow */
- }
-
- .in {
-   display: none;
- }
 
 
  /* // <=================DESKTOP SCREENS HIDE=================> */
@@ -81,6 +43,10 @@
  /* // <=================MOBILE SCREENS HIDE=================> */
 
  @media (max-width: 767px) {
+
+   .app {
+    overflow-x: hidden;
+   }
    .mobile-hide {
      display: none !important;
    }
