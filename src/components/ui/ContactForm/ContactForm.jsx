@@ -704,7 +704,6 @@ const filteredCountries = countryPhoneCodes.filter((country) =>
     <Modal
       show={show}
       centered
-      size="lg"
       dialogClassName={`contact-modal ${Style.contact_modal}`}>
       <Modal.Body className={Style.contact_body_wrapper}>
         <button className={Style.btn_close} onClick={handleClose}>
