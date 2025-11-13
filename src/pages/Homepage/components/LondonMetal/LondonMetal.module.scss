@@ -138,7 +138,7 @@
                 justify-content: center;
                 gap: 4px;
 
-                @media (max-width: 767px) {
+                @media (max-width: 420px) {
                     width: 200px;
                     height: 80px;
                 }
@@ -148,8 +148,16 @@
                     font-weight: 700;
                     color: var(--text-color-1);
 
+                    @media (max-width: 420px) {
+                        font-size: 20px;
+                    }
+
                     span {
                         font-size: 14px;
+
+                        @media (max-width: 420px) {
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -161,6 +169,10 @@
                     justify-content: flex-start;
                     align-items: center;
                     gap: 2px;
+
+                    @media (max-width: 420px) {
+                        font-size: 12px;
+                    }
                 }
 
                 .p_text_2_red {
