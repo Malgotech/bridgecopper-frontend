@@ -54,6 +54,9 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
   };
 
   return (
+
+    <>
+    
     <footer className={Style.footer}>
       <div className="custom-container">
         <div className={Style.footer_container}>
@@ -179,11 +182,15 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
         </div>
       </div>
 
+    
+    </footer>
+
       <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
       />
-    </footer>
+    </>
+
   );
 };
 
