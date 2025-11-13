@@ -21,7 +21,7 @@ const Homepage = ({
       <BannerSection handleContactModal={handleContactModal} />
       <PremiumCopper />
       <LondonMetal />
-      <WhatWeDo isActive={isActive} />
+      {/* <WhatWeDo isActive={isActive} /> */}
 
       <div className={Style.supply_container} id="network">
         <GlobalSupply />
