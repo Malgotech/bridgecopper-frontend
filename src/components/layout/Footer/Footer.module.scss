@@ -5,6 +5,7 @@
     background: var(--background-primary);
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 
     &::after {
         content: "";
