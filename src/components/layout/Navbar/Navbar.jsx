@@ -241,11 +241,11 @@ const Navbar = ({
           )}
         </div>
       </div>
-
+{/* 
       <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
-      />
+      /> */}
     </header>
   );
 };
