@@ -26,6 +26,9 @@ const PremiumCopper = () => {
       <div className={Style.premium_section}>
         <div className="row w-100">
           <div className="col-lg-6 col-md-12 col-12">
+
+
+
             <div className={Style.premium_section_left}>
               <img
                 src={stone}
@@ -75,6 +78,8 @@ const PremiumCopper = () => {
                 </div>
               </div>
             </div>
+
+            
           </div>
           <div className="col-lg-6 col-md-12 col-12  ">
             <div className={Style.premium_section_right}>
