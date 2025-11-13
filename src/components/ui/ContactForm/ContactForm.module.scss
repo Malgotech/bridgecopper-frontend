@@ -94,6 +94,8 @@
                  padding: 20px;
                  margin-top: 30px;
                  padding-bottom: 50px;
+                 gap: 8px;
+
              }
 
 
@@ -108,6 +110,10 @@
                      font-size: 20px;
                  }
 
+                 @media (max-width: 380px) {
+                     font-size: 18px;
+                 }
+
              }
 
              .p_text_1 {
@@ -117,6 +123,10 @@
                  line-height: 124%;
                  letter-spacing: 2%;
                  color: #6C6C6C;
+
+                 @media (max-width: 380px) {
+                     font-size: 12px;
+                 }
              }
 
              .contact_form {
@@ -132,6 +142,10 @@
                      flex-direction: column;
                      align-items: center;
                      justify-content: flex-start;
+                 }
+
+                 @media (max-width: 380px) {
+                     gap: 6px;
                  }
 
                  &>*:first-child {
@@ -171,6 +185,10 @@
                          justify-content: space-between;
                          align-items: center;
 
+                         @media (max-width: 380px) {
+                             height: 38px;
+                         }
+
                          span {
                              width: fit-content;
                              height: 100%;
@@ -205,6 +223,9 @@
                          border: 1px solid #DED6CE;
                          border-radius: 12px;
                          padding: 0px 10px;
+                               @media (max-width: 380px) {
+                             height: 38px;
+                         }
 
                          &::placeholder {
                              font-size: 14px;
@@ -226,6 +247,9 @@
                          font-size: 14px;
                          font-weight: 400;
                          color: #6C6C6C;
+                               @media (max-width: 380px) {
+                             height: 38px;
+                         }
 
                          .phone_dropdown {
                              width: 80px;
@@ -341,6 +365,9 @@
                              font-size: 14px;
                              font-weight: 400;
                              color: #6C6C6C;
+                                   @media (max-width: 380px) {
+                             height: 38px;
+                         }
 
                              .arrow {
                                  font-size: 14px;
@@ -426,6 +453,9 @@
                      justify-content: center;
                      align-items: center;
                      padding: 1px;
+                           @media (max-width: 380px) {
+                             height: 38px;
+                         }
 
                      span {
                          width: 100%;

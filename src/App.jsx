@@ -45,10 +45,10 @@ function App() {
       </div>
 
       
-      {/* <ContactForm
+      <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
-      /> */}
+      />
 
     </>
   );
