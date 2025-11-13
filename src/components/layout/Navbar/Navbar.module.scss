@@ -36,9 +36,9 @@
          max-width: 100%;
          height: 100%;
          display: flex;
-         flex-direction: column;
          justify-content: center;
          align-items: center;
+         gap: 10px;
 
          @media (max-width: 767px) {
              display: flex;
@@ -55,6 +55,68 @@
              gap: 20px;
              padding: 0;
              margin-top: 13px;
+         }
+
+         .language_dropdown {
+             position: relative;
+             width: 150px;
+                @media (max-width: 767px)  {
+                    width: 120px;
+                }
+
+             .dropdown_toggle {
+                 width: 100%;
+                 height: 40px;
+                 border: 1px solid #DED6CE;
+                 background: #fff;
+                 border-radius: 12px;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 gap: 10px;
+                 font-size: 14px;
+                 font-weight: 500;
+                 color: #6C6C6C;
+
+             }
+
+             .dropdown_menu {
+                 position: absolute;
+                 top: 100%;
+                 left: 0;
+                 width: 100%;
+                 height: 80px;
+                 background: white;
+                 border: 1px solid #DED6CE;
+                 border-radius: 12px;
+                 margin-top: 5px;
+                 z-index: 1000;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: flex-start;
+                 align-items: center;
+                 gap: 0;
+                 padding: 0;
+                 overflow: hidden;
+
+                 li {
+                     width: 100%;
+                     height: 40px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     cursor: pointer;
+                     font-size: 14px;
+                     font-weight: 400;
+                     color: #000;
+
+
+                     &:hover {
+                         background-color: #f0f0f0;
+                     }
+                 }
+             }
+
          }
 
          .btn_menu {

@@ -8,50 +8,49 @@ import cardImg1 from "../../../../assets/images/global-new-1.png";
 import cardImg2 from "../../../../assets/images/global-new-2.png";
 import cardImg3 from "../../../../assets/images/global-new-3.png";
 import cardImg4 from "../../../../assets/images/global-new-4.png";
-
-
-const cardData = [
-  {
-    title: "ENAMI Approved",
-    desc: "Direct partnerships with ENAMI-authorized miners in Chile",
-    image: cardImg1,
-  },
-  {
-    title: "Vast Reserves",
-    desc: "More than USD 10 billion in proven copper reserves",
-    image: cardImg2,
-  },
-  {
-    title: "Legacy Leadershi",
-    desc: " Operations managed by a family office with over 80 years’ experience",
-    image: cardImg3,
-  },
-  {
-    title: "World Reach",
-    desc: "Proven track record supplying global industrial, manufacturing, and energy.",
-    image: cardImg4,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const GlobalSupply = () => {
+  const { i18n, t } = useTranslation();
+
+  const cardData = [
+    {
+      title: t("G Text 6"),
+      desc: t("G Text 7"),
+      image: cardImg1,
+    },
+    {
+      title: t("G Text 8"),
+      desc: t("G Text 9"),
+      image: cardImg2,
+    },
+    {
+      title: t("G Text 10"),
+      desc:t("G Text 11"),
+      image: cardImg3,
+    },
+    {
+      title: t("G Text 12"),
+      desc: t("G Text 13"),
+      image: cardImg4,
+    },
+  ];
+
   return (
     <section className={Style.global_section}>
       <div className="custom-container">
         <div className={Style.global_section_head}>
           <div className={Style.global_section_head_left}>
-            <h2 className={Style.h_text_1}>Global Supply Chain</h2>
+            <h2 className={Style.h_text_1}> {t("Global Supply Chain")} </h2>
             <p className={Style.p_text_1}>
-              Bridge Copper integrates direct copper production with a{" "}
-              <br className="break tab-break" /> seamless, world-class logistics
-              network.
+              {t("G Text 1")}
+              <br className="break tab-break" /> {t("G Text 2")}
             </p>
           </div>
           <p className={Style.p_text_2}>
-            Operating from our European headquarters in Austria, we{" "}
-            <br className="break tab-break" /> connect elite mine owners in
-            Chile and Arizona to clients across{" "}
-            <br className="break tab-break" /> Asia, Europe, and the Middle
-            East.
+            {t("G Text 3")}
+            <br className="break tab-break" /> {t("G Text 4")}
+            <br className="break tab-break" /> {t("G Text 5")}
           </p>
         </div>
       </div>
@@ -61,7 +60,7 @@ const GlobalSupply = () => {
           {cardData.map((card, index) => (
             <div className="col-md-6 col-12" key={index}>
               <div className={Style.global_card}>
-                   <div className={Style.blur_bottom} />
+                <div className={Style.blur_bottom} />
                 <img
                   src={card.image}
                   alt={card.title}

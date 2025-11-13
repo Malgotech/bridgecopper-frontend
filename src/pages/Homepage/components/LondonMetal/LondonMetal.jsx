@@ -3,8 +3,11 @@ import Style from "./LondonMetal.module.scss";
 import bridgeImg from "../../../../assets/images/bridge-img.png";
 import upIcon from "../../../../assets/images/up-icon.svg";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const LondonMetal = () => {
+    const { i18n, t } = useTranslation();
+  
   const [price, setprice] = useState("");
   const [percent, setPercent] = useState("");
   const boundingRef = useRef(null);
@@ -59,8 +62,8 @@ const LondonMetal = () => {
       <div className="custom-container ">
         <div className={Style.london_container}>
           <h2 className={Style.h_text_1}>
-            London Metal Exchange (LME) <br />
-            <span>Price Today </span>
+            {t("LME")} <br />
+            <span>  {t("Price Today")}</span>
           </h2>
 
           <div className={Style.bridge_content}>
@@ -92,7 +95,7 @@ const LondonMetal = () => {
 
             <div className={Style.bridge_score_content}>
               <p className={Style.p_text_1}>
-             ${price }/<span>METRIC TON</span>
+             ${price }/<span>{t("METRIC TON")} </span>
               </p>
 
               {percent < 0 ? (

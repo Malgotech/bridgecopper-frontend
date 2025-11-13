@@ -6,11 +6,19 @@ import logo from "../../../assets/images/header-logo.svg";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import ContactForm from "../../ui/ContactForm/ContactForm";
+import { useTranslation } from "react-i18next";
+import { IoIosArrowDown } from "react-icons/io";
 
-const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handleContactModal }) => {
+const Navbar = ({
+  contactModal,
+  setContactModal,
+  setThirdSectionActive,
+  handleContactModal,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [bgChange, setBgChange] = useState(false);
+  const { i18n, t } = useTranslation();
 
   const navigate = useNavigate();
 
@@ -92,6 +100,23 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
     return () => window.removeEventListener("scroll", handleScroll);
   }, [setThirdSectionActive]);
 
+  const [isOpenLang, setIsOpenLang] = useState(false);
+
+  const languages = [
+    { code: "en", label: "English" },
+    { code: "zh", label: "中文" },
+  ];
+
+  const currentLanguage =
+    languages.find((l) => l.code === i18n.language) || languages[0];
+
+  const toggleDropdown = () => setIsOpenLang((prev) => !prev);
+
+  const selectLanguage = (langCode) => {
+    i18n.changeLanguage(langCode);
+    setIsOpenLang(false);
+  };
+
   return (
     <header
       id="navbar"
@@ -107,6 +132,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
               className={Style.header_logo}
             />
           </a>
+
           <nav className={`${Style.header_nav}`}>
             <ul className="mobile-hide ">
               <li>
@@ -114,7 +140,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                   to="#copper"
                   onClick={goToThirdSection}
                   className={`${Style.nav_link} `}>
-                  Our Copper
+                  {t("Our Copper")}
                 </Link>
               </li>
               <li>
@@ -122,7 +148,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                   to="#network"
                   onClick={goToNetworkSection}
                   className={`${Style.nav_link}  `}>
-                  Our Network
+                  {t("Our Network")}
                 </Link>
               </li>
 
@@ -131,14 +157,43 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                   to="#leader"
                   onClick={goToLeaderSection}
                   className={`${Style.nav_link}  `}>
-                  Our Leadership
+                  {t("Our Leadership")}
                 </Link>
               </li>
 
               <li>
-                <Button title="Let's Connect" onClick={handleContactModal} />
+                <Button
+                  title={t("Let's Connect")}
+                  onClick={handleContactModal}
+                />
               </li>
             </ul>
+
+            <div className={Style.language_dropdown}>
+              <button
+                className={Style.dropdown_toggle}
+                onClick={toggleDropdown}>
+                🌍 {currentLanguage.label}
+                <IoIosArrowDown
+                  style={{
+                    transform: isOpenLang ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "0.3s",
+                  }}
+                />
+              </button>
+
+              {isOpenLang && (
+                <ul className={Style.dropdown_menu}>
+                  {languages.map((lang) => (
+                    <li
+                      key={lang.code}
+                      onClick={() => selectLanguage(lang.code)}>
+                      {lang.label}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
             <button
               className={`${Style.btn_menu} desktop-hide tab-hide`}
@@ -154,7 +209,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                     to="#copper"
                     onClick={goToThirdSection}
                     className={`${Style.nav_link} `}>
-                    Our Copper
+                    {t("Our Copper")}
                   </Link>
                 </li>
                 <li>
@@ -162,7 +217,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                     to="#network"
                     onClick={goToNetworkSection}
                     className={`${Style.nav_link}  `}>
-                    Our Network
+                    {t("Our Network")}
                   </Link>
                 </li>
 
@@ -171,12 +226,15 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
                     to="#leader"
                     onClick={goToLeaderSection}
                     className={`${Style.nav_link}  `}>
-                    Our Leadership
+                    {t("Our Leadership")}
                   </Link>
                 </li>
 
                 <li>
-                  <Button title="Let's Connect" onClick={handleContactModal} />
+                  <Button
+                    title={t("Let's Connect")}
+                    onClick={handleContactModal}
+                  />
                 </li>
               </ul>
             </div>
@@ -184,7 +242,7 @@ const Navbar = ({   contactModal,setContactModal , setThirdSectionActive, handle
         </div>
       </div>
 
-                  <ContactForm
+      <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
       />

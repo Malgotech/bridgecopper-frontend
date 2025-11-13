@@ -10,8 +10,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import ContactForm from "../../ui/ContactForm/ContactForm";
+import { useTranslation } from "react-i18next";
 
 const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
+  const {   t } = useTranslation();
+
   const navigate = useNavigate();
 
   const goToThirdSection = () => {
@@ -57,8 +60,8 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
           <div className={Style.footer_head}>
             <div className={Style.footer_head_left}>
               <h2 className={Style.h_text_1}>
-                <span> Get ready to secure your </span> <br />
-                Copper Supply Chain Partner!
+                <span> {t("F-Text-1")} </span> <br />
+                {t("F-Text-2")}
               </h2>
               <div className={Style.footer_left_content}>
                 <p className={Style.p_text_1}>
@@ -69,7 +72,7 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
                     height={20}
                     className={Style.tick}
                   />
-                  80+ years of Experience
+                {t("F-Text-3")}
                 </p>
                 <p className={Style.p_text_1}>
                   <img
@@ -79,19 +82,17 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
                     height={20}
                     className={Style.tick}
                   />
-                  Leadership with Fresh Perspective
+          {t("F-Text-4")}
                 </p>
               </div>
             </div>
             <div className={Style.footer_head_right}>
               <p className={Style.p_text_2}>
-                Operating from Austria, Bridge Copper integrates mining,
-                trading, <br className="break" /> and logistics across
-                continents.
+              {t("F-Text-5")} <br className="break" /> {t("F-Text-6")}
               </p>
 
               <Button
-                title="Let's Connect"
+                title={t("F-Text-7")}
                 img={arrowImg}
                 onClick={handleContactModal}
               />
@@ -112,20 +113,20 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
                 className={Style.foot_link}
                 onClick={goToThirdSection}>
                 {" "}
-                Our Copper
+             {t("Our Copper")}
               </Link>
               <Link
                 to="#network"
                 onClick={goToNetworkSection}
                 className={Style.foot_link}>
                 {" "}
-                Our Network
+               {t("Our Network")}
               </Link>
               <Link
                 to="#leader"
                 onClick={goToLeaderSection}
                 className={Style.foot_link}>
-                Our Leadership
+                 {t("Our Leadership")}
               </Link>
             </div>
             <div className={Style.social_link_container}>
@@ -163,15 +164,15 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
 
           <div className={Style.footer_bottom}>
             <p className={Style.p_text_3}>
-              © 2025 Bridge Copper Inc. | All Rights Reserved
+             {t("F-Text-8")}
             </p>
 
             <div className={Style.footer_bottom_right}>
               <Link to="" className={Style.foot_link}>
-                Terms of Service
+                {t("F-Text-9")}
               </Link>
               <Link to="" className={Style.foot_link}>
-                Privacy Policy
+               {t("F-Text-10")}
               </Link>
             </div>
           </div>

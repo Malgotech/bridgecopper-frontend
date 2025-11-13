@@ -6,8 +6,10 @@ import enami from "../../../../assets/images/enami.webp";
 import square from "../../../../assets/images/Subtract.png";
 import bannerImg from "../../../../assets/images/banner-img.webp";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const BannerSection = ({handleContactModal}) => {
+const BannerSection = ({ handleContactModal }) => {
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
 
   const goToNetworkSection = () => {
@@ -47,14 +49,14 @@ const BannerSection = ({handleContactModal}) => {
 
         <div className={Style.banner_content_top}>
           <h1 className={Style.h_text_1}>
-            From the world's richest <br className="break" /> copper reserves to
-            Asia's <br className="break" /> growing industries
+            {t("banner text 1")} <br className="break" /> {t("span text 1")}{" "}
+            <br className="break" />
+            {t("span text 2")}
           </h1>
 
           <p className={Style.p_text_1}>
-            Strategic investments in Chilean copper production are poised to{" "}
-            <br className="break" /> reshape global supply chains and energize
-            emerging markets.
+            {t("banner text 2")}
+            <br className="break" /> {t("banner span text 1")}
           </p>
 
           <div className={Style.btn_container}>
@@ -69,11 +71,11 @@ const BannerSection = ({handleContactModal}) => {
               to="#network"
               className={Style.btn_explore}
               onClick={goToNetworkSection}>
-              <span>Explore Our Network</span>
+              <span> {t("explore our network")}</span>
             </button>
 
             <button className={Style.btn_connect} onClick={handleContactModal}>
-              <span>Contact Us</span>
+              <span> {t("contact us")}</span>
             </button>
           </div>
         </div>
@@ -85,7 +87,7 @@ const BannerSection = ({handleContactModal}) => {
             </div>
           </div>
 
-          <p className={Style.p_scroll}>Scroll Down</p>
+          <p className={Style.p_scroll}> {t("Scroll Down")} </p>
         </div>
 
         <div className={`${Style.banner_bottom_content} tab-hide mobile-hide`}>
@@ -103,20 +105,20 @@ const BannerSection = ({handleContactModal}) => {
             />
 
             <p className={`${Style.p_text_2} mobile-hide`}>
-              Partnered with entities
+              {t("Partnered with entities")}
             </p>
             <div className={Style.bottom_container}>
               <div className={Style.bottom_content}>
-                <p className={Style.p_text_3}>$10B</p>
-                <p className={Style.p_text_4}>in Copper Reserves</p>
+                <p className={Style.p_text_3}>$10{t("B")}</p>
+                <p className={Style.p_text_4}> {t("in Copper Reserves")} </p>
               </div>
               <div className={Style.bottom_content}>
                 <p className={Style.p_text_3}>80+</p>
-                <p className={Style.p_text_4}>Years of Experience</p>
+                <p className={Style.p_text_4}> {t("Years of Experience")} </p>
               </div>
               <div className={Style.bottom_content}>
                 <img src={enami} alt="enami" width={134} height={48} />
-                <p className={Style.p_text_4}>Chile Authorized</p>
+                <p className={Style.p_text_4}>{t("Chile Authorized")}</p>
               </div>
             </div>
           </div>
@@ -131,19 +133,22 @@ const BannerSection = ({handleContactModal}) => {
             className={`${Style.square_img}  tab-hide mobile-hide`}
           />
 
-          <p className={`${Style.p_text_2} `}>Partnered with entities</p>
+          <p className={`${Style.p_text_2} `}>
+            {" "}
+            {t("Partnered with entities")}
+          </p>
           <div className={Style.bottom_container}>
             <div className={Style.bottom_content}>
-              <p className={Style.p_text_3}>$10B</p>
-              <p className={Style.p_text_4}>in Copper Reserves</p>
+              <p className={Style.p_text_3}>$10{t("B")}</p>
+              <p className={Style.p_text_4}>{t("in Copper Reserves")}</p>
             </div>
             <div className={Style.bottom_content}>
               <p className={Style.p_text_3}>80+</p>
-              <p className={Style.p_text_4}>Years of Experience</p>
+              <p className={Style.p_text_4}>{t("Years of Experience")}</p>
             </div>
             <div className={Style.bottom_content}>
               <img src={enami} alt="enami" width={134} height={48} />
-              <p className={Style.p_text_4}>Chile Authorized</p>
+              <p className={Style.p_text_4}> {t("Chile Authorized")}</p>
             </div>
           </div>
         </div>

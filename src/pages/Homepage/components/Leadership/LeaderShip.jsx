@@ -2,16 +2,19 @@ import React from "react";
 import Style from "./LeaderShip.module.scss";
 import cardImg from "../../../../assets/images/leaderImg.png";
 import clientImg from "../../../../assets/images/Shai.png";
+import { useTranslation } from "react-i18next";
 
 const LeaderShip = () => {
+  const { i18n, t } = useTranslation();
+
   return (
     <section className="custom-container" id="leader">
       <div className={Style.leadership_section}>
-        <h2 className={Style.h_text_1}>Leadership</h2>
+        <h2 className={Style.h_text_1}> {t("Leadership")} </h2>
 
         <p className={Style.p_text_1}>
-          Transparency and accountability define our relationships at{" "}
-          <br className="break" /> every stage.
+       {t("L Text 1")}
+          <br className="break" /> {t("L Text 2")}.
         </p>
 
         <div className={Style.leadership_content}>
@@ -30,23 +33,20 @@ const LeaderShip = () => {
 
                 <div className={Style.content_bottom}>
                   <div className={Style.exp_content}>
-                    <span>25+ years of Experience</span>
+                    <span>{t("L Text 3")}</span>
                   </div>
                   <div className={Style.certified_trader_container}>
-                    <span> Certified Trader</span>
+                    <span> {t("L Text 4")}</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-xxl-6 col-lg-7 col-md-6 col-12">
               <div className={Style.leadership_content_right}>
-                <h3 className={Style.h_text_2}>Haim Dzindzihashvili</h3>
-                <p className={Style.p_text_2}>FOUNDER</p>
+                <h3 className={Style.h_text_2}>{t("L Text 5")}</h3>
+                <p className={Style.p_text_2}>{t("L Text 6")}</p>
                 <p className={Style.p_text_3}>
-                  Founded and led by Haim Dzindzihashvili, a certified trader
-                  with 25+ years experience in commodities and global finance,
-                  Bridge Copper unites tradition, credibility, and
-                  forward-thinking deal-making.
+                 {t("L Text 7")}
                 </p>
               </div>
             </div>
@@ -71,8 +71,8 @@ const LeaderShip = () => {
 
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
-                    <p className={Style.name}>Shai Dzindzihashvili</p>
-                    <p className={Style.role}>Designation</p>
+                    <p className={Style.name}>{t("L Text 8")}</p>
+                    <p className={Style.role}>{t("L Text 9")}</p>
                   </div>
                 </div>
               </div>
@@ -93,8 +93,8 @@ const LeaderShip = () => {
 
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
-                    <p className={Style.name}>Shai Dzindzihashvilii</p>
-                    <p className={Style.role}>Designation</p>
+                       <p className={Style.name}>{t("L Text 8")}</p>
+                    <p className={Style.role}>{t("L Text 9")}</p>
                   </div>
                 </div>
               </div>
@@ -115,8 +115,8 @@ const LeaderShip = () => {
 
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
-                    <p className={Style.name}>Shai Dzindzihashvili</p>
-                    <p className={Style.role}>Designation</p>
+                    <p className={Style.name}>{t("L Text 8")}</p>
+                    <p className={Style.role}>{t("L Text 9")}</p>
                   </div>
                 </div>
               </div>
@@ -137,8 +137,8 @@ const LeaderShip = () => {
 
                 <div className={Style.card_body}>
                   <div className={Style.card_content}>
-                    <p className={Style.name}>Shai Dzindzihashvili</p>
-                    <p className={Style.role}>Designation</p>
+                    <p className={Style.name}>{t("L Text 8")}</p>
+                    <p className={Style.role}>{t("L Text 9")}</p>
                   </div>
                 </div>
               </div>

@@ -3,8 +3,10 @@ import Style from "./PremiumCopper.module.scss";
 import stone from "../../../../assets/images/stone.png";
 import Button from "../../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const PremiumCopper = () => {
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
 
   const goToNetworkSection = () => {
@@ -37,14 +39,14 @@ const PremiumCopper = () => {
                 className={`${Style.round_container} ${Style.round_container_1}`}>
                 <div className={Style.orbit_path}>
                   <div className={Style.cu_container}>
-                    <span>Cu</span>
+                    <span>{t("Cu")}</span>
                   </div>
                 </div>
 
                 <div className={Style.reserve_content}>
                   <span>
                     $10B <br />
-                    Reserve
+                    {t("Reserve")}
                   </span>
                 </div>
 
@@ -53,7 +55,7 @@ const PremiumCopper = () => {
                   <div className={Style.orbit_path}>
                     <div className={Style.mass_container}>
                       <span>
-                        Mass <br />
+                          {t("Mass")}  <br />
                         63.546
                       </span>
                     </div>
@@ -77,26 +79,19 @@ const PremiumCopper = () => {
           <div className="col-lg-6 col-md-12 col-12  ">
             <div className={Style.premium_section_right}>
               <h2 className={Style.h_text_1}>
-                <span> Premium copper </span> <br className="break" />{" "}
-                concentrate. Direct from <br className="break" /> Chile’s
-                world-class ore
+                <span> {t("Premium copper")} </span> <br className="break" />{" "}
+                {t("Premium Text 1")} <br className="break" />{" "}
+                {t("Premium Text 2")}
               </h2>
 
               <p className={Style.p_text_1}>
-                Bridge Copper sources copper ore from Chile, recognized globally
-                for its rich mineral reserves and unparalleled ore quality. Our
-                partners in Chile are among just{" "}
-                <span>
-                  {" "}
-                  twelve elite mining companies authorized by ENAMI Chile,{" "}
-                </span>{" "}
-                the government’s National Mining Enterprise, ensuring all supply
-                meets strict industry and export standards.
+                {t("Premium Text 3")}
+                <span>{t("Premium Span Text ")}</span> {t("Premium Text 4")}
               </p>
 
               <Button
                 to="#network"
-                title="Explore Our Network"
+                title={t("explore our network")}
                 onClick={goToNetworkSection}
               />
             </div>

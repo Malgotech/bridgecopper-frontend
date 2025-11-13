@@ -4,34 +4,15 @@ import cardImg1 from "../../../../assets/images/what-card-img-1.png";
 import cardImg2 from "../../../../assets/images/what-card-img-2.png";
 import cardImg3 from "../../../../assets/images/what-card-img-3.png";
 import cardImg4 from "../../../../assets/images/what-card-img-4.png";
+import { useTranslation } from "react-i18next";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const cards = [
-  {
-    title: "Direct Copper Sourcing",
-    text: "Through direct partnerships with elite mines in Chile and Arizona, and a fully integrated value chain, we ensure clients receive copper supply with maximum reliability, transparency, and quality.",
-    image: cardImg1,
-  },
-  {
-    title: "Exclusive Regional Supply",
-    text: "Our team holds exclusive rights to distribute copper products across leading Asian and Middle Eastern markets, tailored to meet the strategic needs of industrial and energy sectors.",
-    image: cardImg2,
-  },
-  {
-    title: "Integrated Trade Logistics",
-    text: "From mine to smelter, we coordinate every link: shipping, inspection, insurance, and finance. Each shipment complies with strict international standards, and secure movement.",
-    image: cardImg3,
-  },
-  {
-    title: "Trusted Partnerships",
-    text: "Transparency and accountability are embedded throughout our operations, backed by international banks and  trade insurance providers. Our system is designed for long-term confidence",
-    image: cardImg4,
-  },
-];
+
 
 const WhatWeDo = ({ isActive }) => {
+  const { i18n, t } = useTranslation();
   const [activatedCards, setActivatedCards] = useState([]);
   const cardRefs = useRef([]);
 
@@ -65,6 +46,30 @@ const WhatWeDo = ({ isActive }) => {
     });
   }, []);
 
+
+  const cards = [
+  {
+    title: t("What Text 6"),
+    text:  t("What Text 7"),
+    image: cardImg1,
+  },
+  {
+    title:  t("What Text 8"),
+    text:  t("What Text 9"),
+    image: cardImg2,
+  },
+  {
+    title:  t("What Text 10"),
+    text:  t("What Text 11"),
+    image: cardImg3,
+  },
+  {
+    title:  t("What Text 12"),
+    text: t("What Text 13"),
+    image: cardImg4,
+  },
+];
+
   return (
     <section
       id="third-section"
@@ -74,17 +79,15 @@ const WhatWeDo = ({ isActive }) => {
       <div className="custom-container">
         <div className={Style.what_section_head}>
           <div className={Style.what_section_head_left}>
-            <h2 className={Style.h_text_1}>What We Do?</h2>
+            <h2 className={Style.h_text_1}> {t("What We Do")} </h2>
             <p className={Style.p_text_1}>
-              Bridge Copper connects responsible copper production  <br className="break" />  with the
-              industries shaping tomorrow.
+              {t("What Text 1")}
+              <br className="break" /> {t("What Text 2")}
             </p>
           </div>
           <p className={Style.p_text_2}>
-            Through direct partnerships with elite mines in Chile and Arizona,
-            and a fully <br className="break  " /> integrated value chain, we
-            ensure clients receive copper supply with maximum{" "}
-            <br className="break" /> reliability, transparency, and quality.
+            {t("What Text 3")} <br className="break  " /> {t("What Text 4")}
+            <br className="break" /> {t("What Text 5")}
           </p>
         </div>
       </div>

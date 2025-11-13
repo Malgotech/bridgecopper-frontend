@@ -7,6 +7,8 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "react-i18next";
+
 
 const countries = [
   "Afghanistan",
@@ -644,6 +646,8 @@ const countryPhoneLengths = {
 };
 
 const ContactForm = ({ show, handleClose }) => {
+    const { i18n, t } = useTranslation();
+  
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Select Country");
@@ -718,11 +722,10 @@ const filteredCountries = countryPhoneCodes.filter((country) =>
 
         <div className={Style.contact_body_right}>
           <h2 className={Style.h_text_1}>
-            Copper from the Source, Delivered Worldwide
+              {t("C-Text-1")}
           </h2>
           <p className={Style.p_text_1}>
-            Connect with Bridge Copper to secure a steady flow of high-quality
-            copper concentrates, directly from Chile’s world-leading mines.
+           {t("C-Text-2")}
           </p>
 
           <form className={Style.contact_form}>
