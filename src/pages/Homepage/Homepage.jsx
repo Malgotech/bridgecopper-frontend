@@ -15,8 +15,8 @@ const Homepage = ({ isActive,handleContactModal,contactModal,setContactModal }) 
     <div className={Style.homepage}>
       <BannerSection handleContactModal={handleContactModal}/>
       <PremiumCopper />
-      {/* <LondonMetal />
-      <WhatWeDo isActive={isActive} />
+      <LondonMetal />
+      {/* <WhatWeDo isActive={isActive} />
 
       <div className= {Style.supply_container} id="network">
         <GlobalSupply />
