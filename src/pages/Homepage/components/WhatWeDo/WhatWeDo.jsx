@@ -92,7 +92,7 @@ const WhatWeDo = ({ isActive }) => {
         </div>
       </div>
 
-      <div className="custom-container" data-aos="fade-up">
+      <div className="custom-container mobile-hide" data-aos="fade-up">
         <div className={Style.what_card_container}>
           {cards.map((card, i) => (
             <div
