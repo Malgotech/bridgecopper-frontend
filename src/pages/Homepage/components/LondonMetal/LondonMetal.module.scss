@@ -241,14 +241,14 @@
             opacity: 0;
 
             @media (max-width: 767px) {
+                width: 180px;
+                height: 180px;
+            }
+
+            @media (max-width: 767px) {
                 width: 120px;
                 height: 120px;
             }
-
-            // @media (max-width: 420px) {
-            //     width: 120px;
-            //     height: 120px;
-            // }
         }
 
         .ripple:nth-child(1) {
