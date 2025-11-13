@@ -35,10 +35,7 @@ const Homepage = ({
         <PartnerShip />
         <LeaderShip />
       </div>
-      <ContactForm
-        show={contactModal}
-        handleClose={() => setContactModal(false)}
-      />
+ 
     </>
   );
 };

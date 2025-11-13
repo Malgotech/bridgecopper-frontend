@@ -44,6 +44,12 @@ function App() {
         <Footer  setContactModal={setContactModal}  contactModal={contactModal}  handleContactModal={handleContactModal} />
       </div>
 
+      
+      <ContactForm
+        show={contactModal}
+        handleClose={() => setContactModal(false)}
+      />
+
     </>
   );
 }
