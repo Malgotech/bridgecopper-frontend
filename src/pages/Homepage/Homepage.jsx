@@ -10,23 +10,31 @@ import BannerSection from "./components/BannerSection/BannerSection";
 import ScrollStack from "./components/ScrollStack/ScrollStack";
 import ContactForm from "../../components/ui/ContactForm/ContactForm";
 
-const Homepage = ({ isActive,handleContactModal,contactModal,setContactModal }) => {
+const Homepage = ({
+  isActive,
+  handleContactModal,
+  contactModal,
+  setContactModal,
+}) => {
   return (
     <div className={Style.homepage}>
-      <BannerSection handleContactModal={handleContactModal}/>
+      <BannerSection handleContactModal={handleContactModal} />
       <PremiumCopper />
-      {/* <LondonMetal /> */}
+      <LondonMetal />
       <WhatWeDo isActive={isActive} />
 
-      <div className= {Style.supply_container} id="network">
+      <div className={Style.supply_container} id="network">
         <GlobalSupply />
-        <ScrollStack />
+
+        <div className="tab-hide mobile-hide">
+          <ScrollStack />
+        </div>
       </div>
 
       <PartnerShip />
       <LeaderShip />
 
-            <ContactForm
+      <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
       />
