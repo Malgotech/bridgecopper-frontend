@@ -46,21 +46,28 @@ ul {
 ::-webkit-scrollbar {
     width: 4px;
     height: 8px;
+    display: none;
+
 }
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #6D2902;
     border-radius: 10px;
+    display: none;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #6D2902;
     border-radius: 10px;
+    display: none;
+
 }
 
 
