@@ -134,7 +134,7 @@ const Navbar = ({
               />
             </a>
 
-            <nav className={`${Style.header_nav} mobile-hide`}>
+            <nav className={`${Style.header_nav}`}>
               <ul className="mobile-hide ">
                 <li>
                   <Link
