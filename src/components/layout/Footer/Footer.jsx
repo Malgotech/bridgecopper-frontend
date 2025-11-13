@@ -179,10 +179,10 @@ const Footer = ({ handleContactModal, contactModal, setContactModal }) => {
         </div>
       </div>
 
-      {/* <ContactForm
+      <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
-      /> */}
+      />
     </footer>
   );
 };

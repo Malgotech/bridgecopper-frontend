@@ -14,7 +14,7 @@ const Homepage = ({ isActive,handleContactModal,contactModal,setContactModal }) 
   return (
     <div className={Style.homepage}>
       <BannerSection handleContactModal={handleContactModal}/>
-      <PremiumCopper />
+      {/* <PremiumCopper />
       <LondonMetal />
       <WhatWeDo isActive={isActive} />
 
@@ -24,12 +24,12 @@ const Homepage = ({ isActive,handleContactModal,contactModal,setContactModal }) 
       </div>
 
       <PartnerShip />
-      <LeaderShip />
+      <LeaderShip /> */}
 
-            {/* <ContactForm
+            <ContactForm
         show={contactModal}
         handleClose={() => setContactModal(false)}
-      /> */}
+      />
     </div>
   );
 };
